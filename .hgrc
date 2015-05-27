@@ -1,0 +1,22 @@
+[ui]
+username = jalal <jalal@gnomedia.com>
+merge = /usr/bin/diff3
+editor = vim
+ignore = ~/.hgignorerc
+
+[extensions]
+color =
+convert =
+# hgk = /usr/share/pyshared/hgext/hgk.py
+# hggit = /usr/share/pyshared/hgext/git
+rebase =
+graphlog =
+
+[tortoisehg]
+editor = subl
+tabwidth = 2
+vdiff = /usr/bin/xxdiff
+postpull = rebase
+monitorrepo = always
+ui.language = en_GB
+authorcolor = True
