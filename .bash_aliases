@@ -1,0 +1,5 @@
+alias dspace='ls -NQ | xargs du -s | sort -k 1 -g'
+alias less8='LESSCHARSET=utf-8 less'
+alias ducks='du -cks * | sort -rn | head -11'
+alias dir='ls -al'
+alias tma='tmux attach'

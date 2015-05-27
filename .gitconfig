@@ -1,0 +1,9 @@
+[user]
+	name = jalal (Tim Pushman)
+	email = thpushman@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = warn
+	excludesfile = /home/jalal/.gitignorerc
+[credential]
+	helper = cache --timeout=3600

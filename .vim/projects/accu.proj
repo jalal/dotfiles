@@ -1,0 +1,5136 @@
+ACCU=/home/wwwroot/accu.org CD=/home/wwwroot/accu.org filter="*.php *.xd *.xt" {
+ ajaxnamesearch.php
+ index.php
+ install.php
+ invoice.php
+ upgrade.php
+ val.php
+ wpcallback.php
+ ws.php
+ modules=/home/wwwroot/accu.org CD=. {
+  ajaxnamesearch.php
+  index.php
+  install.php
+  invoice.php
+  upgrade.php
+  val.php
+  wpcallback.php
+  ws.php
+  ACCU=ACCU {
+   images=images {
+   }
+  }
+  accuwiki=accuwiki {
+   doku.php
+   feed.php
+   index.php
+   bin=bin {
+    dwpage.php
+    indexer.php
+    wantedpages.php
+   }
+   conf=conf {
+    acl.auth.php
+    dokuwiki.php
+    local.php
+    users.auth.php
+   }
+   inc=inc {
+    DifferenceEngine.php
+    HTTPClient.php
+    JSON.php
+    JpegMeta.php
+    actions.php
+    admin_acl.php
+    aspell.php
+    auth.php
+    blowfish.php
+    cliopts.php
+    common.php
+    confutils.php
+    feedcreator.class.php
+    fulltext.php
+    geshi.php
+    html.php
+    indexer.php
+    init.php
+    io.php
+    mail.php
+    pageutils.php
+    parserutils.php
+    pluginutils.php
+    search.php
+    template.php
+    toolbar.php
+    utf8.php
+    auth=auth {
+     basic.class.php
+     ldap.class.php
+     mysql.class.php
+     pgsql.class.php
+     plain.class.php
+     punbb.class.php
+    }
+    geshi=geshi {
+     actionscript-french.php
+     actionscript.php
+     ada.php
+     apache.php
+     applescript.php
+     asm.php
+     asp.php
+     autoit.php
+     bash.php
+     blitzbasic.php
+     c.php
+     c_mac.php
+     caddcl.php
+     cadlisp.php
+     cfm.php
+     cpp.php
+     csharp.php
+     css.php
+     d.php
+     delphi.php
+     diff.php
+     div.php
+     dos.php
+     eiffel.php
+     freebasic.php
+     gml.php
+     html4strict.php
+     ini.php
+     inno.php
+     java.php
+     java5.php
+     javascript.php
+     lisp.php
+     lua.php
+     matlab.php
+     mpasm.php
+     mysql.php
+     nsis.php
+     objc.php
+     ocaml-brief.php
+     ocaml.php
+     oobas.php
+     oracle8.php
+     pascal.php
+     perl.php
+     php-brief.php
+     php.php
+     python.php
+     qbasic.php
+     robots.php
+     ruby.php
+     scheme.php
+     sdlbasic.php
+     smarty.php
+     sql.php
+     tsql.php
+     vb.php
+     vbnet.php
+     vhdl.php
+     visualfoxpro.php
+     xml.php
+    }
+    lang=lang {
+     en=en {
+      lang.php
+     }
+    }
+    magpie=magpie {
+    }
+    parser=parser {
+     handler.php
+     lexer.php
+     parser.php
+     renderer.php
+     wiki.php
+     xhtml.php
+     xhtmlsummary.php
+    }
+   }
+   lib=lib {
+    exe=exe {
+     ajax.php
+     css.php
+     detail.php
+     fetch.php
+     indexer.php
+     js.php
+     media.php
+     spellcheck.php
+    }
+    images=images {
+     fileicons=fileicons {
+     }
+     interwiki=interwiki {
+     }
+     smileys=smileys {
+     }
+     toolbar=toolbar {
+     }
+    }
+    plugins=plugins {
+     admin.php
+     syntax.php
+     acl=acl {
+      admin.php
+      lang=lang {
+       ar=ar {
+        lang.php
+       }
+       ca=ca {
+        lang.php
+       }
+       cs=cs {
+        lang.php
+       }
+       da=da {
+        lang.php
+       }
+       de=de {
+        lang.php
+       }
+       en=en {
+        lang.php
+       }
+       et=et {
+        lang.php
+       }
+       eu=eu {
+       }
+       fi=fi {
+       }
+       fr=fr {
+        lang.php
+       }
+       id=id {
+        lang.php
+       }
+       it=it {
+        lang.php
+       }
+       ja=ja {
+        lang.php
+       }
+       lt=lt {
+        lang.php
+       }
+       lv=lv {
+        lang.php
+       }
+       nl=nl {
+        lang.php
+       }
+       no=no {
+        lang.php
+       }
+       pl=pl {
+        lang.php
+       }
+       pt=pt {
+        lang.php
+       }
+       ru=ru {
+        lang.php
+       }
+       sk=sk {
+        lang.php
+       }
+       sr=sr {
+        lang.php
+       }
+       tr=tr {
+        lang.php
+       }
+       vi=vi {
+        lang.php
+       }
+       zh-tw=zh-tw {
+        lang.php
+       }
+      }
+     }
+     config=config {
+      admin.php
+      lang=lang {
+       en=en {
+        lang.php
+       }
+      }
+      settings=settings {
+       config.class.php
+       config.metadata.php
+       extra.class.php
+      }
+     }
+     info=info {
+      syntax.php
+     }
+     plugin=plugin {
+      admin.php
+      inc=inc {
+       tarlib.class.php
+       zip.lib.php
+      }
+      lang=lang {
+       cs=cs {
+        lang.php
+       }
+       da=da {
+        lang.php
+       }
+       de=de {
+        lang.php
+       }
+       en=en {
+        lang.php
+       }
+       fr=fr {
+        lang.php
+       }
+       pl=pl {
+        lang.php
+       }
+       ru=ru {
+        lang.php
+       }
+      }
+     }
+     usermanager=usermanager {
+      admin.php
+      images=images {
+      }
+      lang=lang {
+       cs=cs {
+        lang.php
+       }
+       da=da {
+        lang.php
+       }
+       de=de {
+        lang.php
+       }
+       en=en {
+        lang.php
+       }
+       fr=fr {
+        lang.php
+       }
+       ja=ja {
+        lang.php
+       }
+       lv=lv {
+        lang.php
+       }
+       pl=pl {
+        lang.php
+       }
+       ru=ru {
+        lang.php
+       }
+      }
+     }
+    }
+    scripts=scripts {
+    }
+    styles=styles {
+    }
+    tpl=tpl {
+     default=default {
+      detail.php
+      main.php
+      media.php
+      mediaedit.php
+      mediaref.php
+      images=images {
+      }
+     }
+    }
+   }
+  }
+  content=content {
+   conf2006=conf2006 {
+   }
+   conf2007=conf2007 {
+   }
+   conf2008=conf2008 {
+   }
+   images=images {
+    conferences=conferences {
+     2004=2004 {
+     }
+     2006=2006 {
+     }
+     2007=2007 {
+     }
+     2008=2008 {
+     }
+     2009=2009 {
+     }
+    }
+    journals=journals {
+     ol01=ol01 {
+     }
+     ol02=ol02 {
+     }
+     ol03=ol03 {
+     }
+     ol04=ol04 {
+     }
+     ol73=ol73 {
+     }
+     ol74=ol74 {
+     }
+     ol75=ol75 {
+     }
+     ol77=ol77 {
+     }
+     ol78=ol78 {
+     }
+     ol79=ol79 {
+     }
+     ol82=ol82 {
+      Bashir=Bashir {
+      }
+      Golodetz=Golodetz {
+      }
+      Harris=Harris {
+      }
+     }
+     ol83=ol83 {
+      Golodetz=Golodetz {
+      }
+      Harris=Harris {
+      }
+     }
+     ol84=ol84 {
+      Golodetz=Golodetz {
+      }
+      Harris=Harris {
+      }
+     }
+     ol85=ol85 {
+      Harris=Harris {
+      }
+     }
+    }
+   }
+   pdf=pdf {
+    agm=agm {
+    }
+    presentations=presentations {
+     accu-london=accu-london {
+     }
+     accu2005=accu2005 {
+     }
+    }
+   }
+  }
+  includes=includes {
+   pnHTML.php
+   xarBLCompiler.php
+   xarBlocks.php
+   xarCache.php
+   xarConfig.php
+   xarCore.php
+   xarDB.php
+   xarDataDict.php
+   xarDate.php
+   xarEvt.php
+   xarException.php
+   xarLegacy.php
+   xarLocale.php
+   xarLog.php
+   xarMLS.php
+   xarMLSPHPBackend.php
+   xarMLSXML2PHPBackend.php
+   xarMLSXMLBackend.php
+   xarMod.php
+   xarPHPCompat.php
+   xarPreCore.php
+   xarSecurity.php
+   xarServer.php
+   xarSession.php
+   xarTableDDL.php
+   xarTemplate.php
+   xarTheme.php
+   xarUser.php
+   xarVar.php
+   xarXML.php
+   blnodes=blnodes {
+    entities=entities {
+     baseurl.php
+     config.php
+     currenturl.php
+     mod.php
+     modurl.php
+     session.php
+     url.php
+     var.php
+    }
+    instructions=instructions {
+     api.php
+     var.php
+    }
+    tags=tags {
+     block.php
+     blockgroup.php
+     blocklayout.php
+     break.php
+     comment.php
+     continue.php
+     else.php
+     elseif.php
+     event.php
+     for.php
+     foreach.php
+     if.php
+     loop.php
+     ml.php
+     mlkey.php
+     mlstring.php
+     mlvar.php
+     module.php
+     other.php
+     sec.php
+     set.php
+     template.php
+     var.php
+     while.php
+    }
+   }
+   caching=caching {
+    block.php
+    page.php
+    storage.php
+    storage=storage {
+     database.php
+     eaccelerator.php
+     filesystem.php
+     memcached.php
+     mmcache.php
+    }
+   }
+   datastores=datastores {
+    Dynamic_CSVFile_DataStore.php
+    Dynamic_Dummy_DataStore.php
+    Dynamic_File_DataStore.php
+    Dynamic_FlatTable_DataStore.php
+    Dynamic_Function_DataStore.php
+    Dynamic_Hook_DataStore.php
+    Dynamic_Join_DataStore.php
+    Dynamic_LDAP_DataStore.php
+    Dynamic_ModuleVariables_DataStore.php
+    Dynamic_SQL_DataStore.php
+    Dynamic_UserSettings_DataStore.php
+    Dynamic_VariableTable_DataStore.php
+    Dynamic_XMLFile_DataStore.php
+   }
+   exceptions=exceptions {
+    defaultuserexception.class.php
+    defaultuserexception.defaults.php
+    errorcollection.class.php
+    exception.class.php
+    exceptionrendering.class.php
+    exceptionstack.class.php
+    htmlexceptionrendering.class.php
+    noexception.class.php
+    systemexception.class.php
+    systemexception.defaults.php
+    systemmessage.class.php
+    systemmessage.defaults.php
+    textexceptionrendering.class.php
+    xarayacomponents.php
+   }
+   log=log {
+    functions=functions {
+     dumpvariable.php
+     stringtolevel.php
+    }
+    loggers=loggers {
+     error_log.php
+     html.php
+     javascript.php
+     mail.php
+     mozilla.php
+     simple.php
+     sql.php
+     syslog.php
+     winsyslog.php
+     xarLogger.php
+    }
+   }
+   phpcompat=phpcompat {
+    constants=constants {
+     PATH_SEPARATOR.php
+    }
+    stubs=stubs {
+     file_get_contents.php
+     fnmatch.php
+     html_entity_decode.php
+     mb_substr.php
+     functions=functions {
+      _file_get_contents.php
+      _fnmatch.php
+      _html_entity_decode.php
+      _mb_substr.php
+     }
+    }
+   }
+   properties=properties {
+    Dynamic_Hardcore_Property.php
+   }
+   tableddl=tableddl {
+    datadict.php
+    mysql.php
+    oracle.php
+    postgres.php
+    sqlite.php
+   }
+   transforms=transforms {
+    HTML_to_XML.php
+    xarCharset.php
+    convtables=convtables {
+    }
+   }
+   validations=validations {
+    array.php
+    bool.php
+    capostalcode.php
+    checkbox.php
+    date.php
+    email.php
+    enum.php
+    float.php
+    fullemail.php
+    html.php
+    id.php
+    int.php
+    isset.php
+    keylist.php
+    list.php
+    mxcheck.php
+    nanpphone.php
+    notempty.php
+    pre.php
+    regexp.php
+    str.php
+    strlist.php
+    uszip.php
+    version.php
+   }
+  }
+  modules=modules {
+   accusub=accusub {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     addmembers.php
+     createinvoice.php
+     delete.php
+     deletesub.php
+     main.php
+     managesubs.php
+     modifyconfig.php
+     modifymember.php
+     overview.php
+     reports.php
+     updatemember.php
+     viewmembers.php
+     viewsubs.php
+    }
+    xaradminapi=xaradminapi {
+     calculatedates.php
+     create.php
+     createinvoice.php
+     createsub.php
+     delete.php
+     deletesub.php
+     demote.php
+     editsub.php
+     getmenulinks.php
+     modify.php
+     newnumber.php
+     promote.php
+    }
+    xarblocks=xarblocks {
+     subscription.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     cleandb.php
+     dailysignups.php
+     reminders.php
+     unsubscribe.php
+    }
+    xartemplates=xartemplates {
+     admin-addmembers.xd
+     admin-delete.xd
+     admin-deletesub.xd
+     admin-import.xd
+     admin-main.xd
+     admin-managesubs.xd
+     admin-modifyconfig.xd
+     admin-modifymember.xd
+     admin-new.xd
+     admin-reports.xd
+     admin-view.xd
+     admin-viewmembers.xd
+     user-editdetails.xd
+     user-subscribe.xd
+     user-user_menu_form.xd
+     user-user_menu_icon.xd
+     user-view.xd
+     blocks=blocks {
+     }
+     includes=includes {
+      admin-menu.xd
+      user-menu.xd
+     }
+    }
+    xaruser=xaruser {
+     editdetails.php
+     invoice.php
+     subscribe.php
+     usermenu.php
+     view.php
+    }
+    xaruserapi=xaruserapi {
+     countitems.php
+     get.php
+     getall.php
+     getallsubs.php
+     getcountries.php
+     getsub.php
+     search.php
+    }
+   }
+   ajax=ajax {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarlibapi=xarlibapi {
+     handleincludes.php
+     includes.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     includes=includes {
+     }
+    }
+   }
+   articles=articles {
+    xarinit.php
+    xarsetup.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     create.php
+     delete.php
+     exportpubtype.php
+     importpages.php
+     importpictures.php
+     importpubtype.php
+     main.php
+     modify.php
+     modifyconfig.php
+     new.php
+     overview.php
+     privileges.php
+     pubtypes.php
+     showpropval.php
+     stats.php
+     update.php
+     updateconfig.php
+     updatestatus.php
+     view.php
+     waitingcontent.php
+    }
+    xaradminapi=xaradminapi {
+     browse.php
+     create.php
+     createpubtype.php
+     delete.php
+     deletepubtype.php
+     getmenulinks.php
+     getstats.php
+     importpubtype.php
+     update.php
+     updatepubtype.php
+    }
+    xarblocks=xarblocks {
+     featureditems.php
+     glossary.php
+     modify-featureditems.php
+     modify-navigation.php
+     modify-random.php
+     modify-topitems.php
+     navigation.php
+     random.php
+     related.php
+     topitems.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarproperties=xarproperties {
+     Dynamic_Status_Property.php
+    }
+    xarschedulerapi=xarschedulerapi {
+     changestatus.php
+     makedigest.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xt
+     admin-exportpubtype.xt
+     admin-importpages.xt
+     admin-importpictures.xt
+     admin-importpubtype.xt
+     admin-main.xt
+     admin-modify.xt
+     admin-modifyconfig.xt
+     admin-new.xt
+     admin-privileges.xt
+     admin-pubtypes.xt
+     admin-showpropval.xt
+     admin-stats.xt
+     admin-view.xt
+     admin-waitingcontent.xt
+     user-archive.xt
+     user-delete.xt
+     user-display-docs.xt
+     user-display-downloads.xt
+     user-display-faqs.xt
+     user-display-news.xt
+     user-display-pages.xt
+     user-display-pictures.xt
+     user-display-quotes.xt
+     user-display-reviews.xt
+     user-display-weblinks.xt
+     user-display.xt
+     user-modify.xt
+     user-new.xt
+     user-search.xt
+     user-summary-docs.xt
+     user-summary-downloads.xt
+     user-summary-faqs.xt
+     user-summary-news.xt
+     user-summary-pages.xt
+     user-summary-pictures.xt
+     user-summary-quotes.xt
+     user-summary-reviews.xt
+     user-summary-weblinks.xt
+     user-summary.xt
+     user-view-faqs.xt
+     user-view-pictures.xt
+     user-view.xt
+     user-viewlist.xt
+     user-viewmap.xt
+     blocks=blocks {
+      featureditems.xt
+      glossary.xt
+      modify-admin.xt
+      modify-featureditems.xt
+      modify-glossary.xt
+      modify-random.xt
+      modify-related.xt
+      modify-topitems.xt
+      nav-admin.xt
+      nav-menu.xt
+      nav-trails.xt
+      nav-tree.xt
+      random.xt
+      related.xt
+      topitems.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      alphapager.xt
+      navtabs-status.xt
+      navtabs-user-map-extended.xt
+      navtabs-user-map.xt
+      navtabs-user.xt
+      navtabs.xt
+      picture-display.xt
+      picture-thumbnail.xt
+      publinks.xt
+      search-form.xt
+      substats.xt
+      user-menu.xt
+      util-menu.xt
+     }
+    }
+    xaruser=xaruser {
+     archive.php
+     create.php
+     delete.php
+     display.php
+     main.php
+     modify.php
+     new.php
+     redirect.php
+     search.php
+     update.php
+     updatestatus.php
+     view.php
+     viewlist.php
+     viewmap.php
+    }
+    xaruserapi=xaruserapi {
+     checksecurity.php
+     countitems.php
+     create.php
+     decode_shorturl.php
+     delete.php
+     dropdownlist.php
+     encode_shorturl.php
+     formhooks.php
+     generatekeywords.php
+     get.php
+     getall.php
+     getauthors.php
+     getchildcats.php
+     getfieldformatnums.php
+     getitemfields.php
+     getitemlinks.php
+     getitemtypes.php
+     getmenulinks.php
+     getmonthcount.php
+     getnext.php
+     getparentcats.php
+     getprevious.php
+     getpubcatcount.php
+     getpubcount.php
+     getpubfieldformats.php
+     getpubfields.php
+     getpubfieldtypes.php
+     getpublinks.php
+     getpubtypes.php
+     getrandom.php
+     getrootcats.php
+     getstates.php
+     getstatusname.php
+     handlefieldtag.php
+     leftjoin.php
+     showfield.php
+     update.php
+    }
+   }
+   authsystem=authsystem {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     createpassword.php
+     main.php
+     modifyconfig.php
+     overview.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+    }
+    xarblocks=xarblocks {
+     login.php
+     modify-login.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-main.xt
+     admin-modifyconfig.xt
+     user-choices.xt
+     user-showloginform.xt
+     blocks=blocks {
+      login.xt
+      logout.xt
+      modify-login.xt
+     }
+     includes=includes {
+      admin-menu.xt
+     }
+    }
+    xaruser=xaruser {
+     login.php
+     logout.php
+     main.php
+     showloginform.php
+    }
+    xaruserapi=xaruserapi {
+     authenticate_user.php
+     decode_shorturl.php
+     encode_shorturl.php
+     get_user_variable.php
+     has_capability.php
+     is_valid_variable.php
+     login.php
+     set_user_variable.php
+    }
+   }
+   autolinks=autolinks {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     create.php
+     createtype.php
+     delete.php
+     deletetype.php
+     enable.php
+     main.php
+     modify.php
+     modifyconfig.php
+     modifytype.php
+     move.php
+     new.php
+     newtype.php
+     overview.php
+     update.php
+     updateconfig.php
+     view.php
+     viewtype.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     createtype.php
+     delete.php
+     deletetype.php
+     getmenulinks.php
+     samples.php
+     update.php
+     updatecache.php
+     updatetype.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xt
+     admin-deletetype.xt
+     admin-main.xt
+     admin-modify.xt
+     admin-modifyconfig.xt
+     admin-modifytype.xt
+     admin-move.xt
+     admin-new.xt
+     admin-newtype.xt
+     admin-view.xt
+     admin-viewtype.xt
+     error-match.xt
+     link-article.xt
+     link-external.xt
+     link-externalcss.xt
+     link-generic.xt
+     link-glossary.xt
+     link-mailto.xt
+     link-sample1.xt
+     link-standard.xt
+     util-export.xt
+     util-main.xt
+     util-samples.xt
+     includes=includes {
+      admin-menu.xt
+      util-menu.xt
+     }
+    }
+    xaruserapi=xaruserapi {
+     _transform.php
+     countitems.php
+     counttypes.php
+     get.php
+     getall.php
+     getalltypes.php
+     getreplace.php
+     gettype.php
+     htmlattributes.php
+     transform.php
+     varexport.php
+    }
+    xarutil=xarutil {
+     export.php
+     main.php
+     samples.php
+    }
+   }
+   base=base {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     confirmlogout.php
+     main.php
+     modifyconfig.php
+     overview.php
+     release.php
+     sysinfo.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+     waitingcontent.php
+    }
+    xarblocks=xarblocks {
+     adminmenu.php
+     content.php
+     finclude.php
+     html.php
+     menu.php
+     modify-adminmenu.php
+     modify-content.php
+     php.php
+     text.php
+     waitingcontent.php
+    }
+    xarclass=xarclass {
+     feedParser.php
+     xarCurl.php
+     xmlParser.php
+    }
+    xarimages=xarimages {
+     icons=icons {
+     }
+     jquery=jquery {
+      plugins=plugins {
+       cluetip=cluetip {
+       }
+       countdown=countdown {
+       }
+       fancybox=fancybox {
+       }
+       ifixpng=ifixpng {
+       }
+       jqgalview=jqgalview {
+       }
+       pngfix=pngfix {
+       }
+       superfish=superfish {
+       }
+       tablesorter=tablesorter {
+        addons=addons {
+         pager=pager {
+         }
+        }
+        themes=themes {
+         blue=blue {
+         }
+         green=green {
+         }
+        }
+       }
+       thickbox=thickbox {
+       }
+       treeview=treeview {
+       }
+       ui=ui {
+        smoothness=smoothness {
+        }
+       }
+      }
+     }
+    }
+    xarjavascriptapi=xarjavascriptapi {
+     _findfile.php
+     appendframeworkevent.php
+     geteventattributes.php
+     geteventjs.php
+     getframeworkinfo.php
+     getplugininfo.php
+     handleeventjavascript.php
+     handleframeworkeventjavascript.php
+     handleframeworkjavascript.php
+     handlemodulejavascript.php
+     handlepluginjavascript.php
+     handlerenderjavascript.php
+     importplugins.php
+     init.php
+     loadplugin.php
+     modulecode.php
+     modulefile.php
+     moduleinline.php
+     registerframework.php
+     registerplugin.php
+    }
+    xarjqueryapi=xarjqueryapi {
+     appendframeworkevent.php
+     init.php
+     loadplugin.php
+    }
+    xarproperties=xarproperties {
+     Dynamic_Array_Property.php
+     Dynamic_BLT_Property.php
+     Dynamic_Calendar_Property.php
+     Dynamic_CheckboxList_Property.php
+     Dynamic_CheckboxMask_Property.php
+     Dynamic_Checkbox_Property.php
+     Dynamic_Combo_Property.php
+     Dynamic_CountryList_Property.php
+     Dynamic_DateFormat_Property.php
+     Dynamic_ExtendedDate_Property.php
+     Dynamic_FileList_Property.php
+     Dynamic_FileUpload_Property.php
+     Dynamic_FloatBox_Property.php
+     Dynamic_HTMLPage_Property.php
+     Dynamic_Hidden_Property.php
+     Dynamic_ImageList_Property.php
+     Dynamic_Image_Property.php
+     Dynamic_LanguageList_Property.php
+     Dynamic_LocalCurrency_Property.php
+     Dynamic_MultiSelect_Property.php
+     Dynamic_NumberBox_Property.php
+     Dynamic_NumberList_Property.php
+     Dynamic_OrderSelect_Property.php
+     Dynamic_RadioButtons_Property.php
+     Dynamic_Select_Property.php
+     Dynamic_StateList_Property.php
+     Dynamic_StaticText_Property.php
+     Dynamic_TColorPicker_Property.php
+     Dynamic_TextArea_Property.php
+     Dynamic_TextBox_Property.php
+     Dynamic_TextUpload_Property.php
+     Dynamic_TimeZone_Property.php
+     Dynamic_URLIcon_Property.php
+     Dynamic_URLTitle_Property.php
+     Dynamic_URL_Property.php
+    }
+    xarstyles=xarstyles {
+     jquery=jquery {
+      plugins=plugins {
+       cluetip=cluetip {
+        images=images {
+        }
+       }
+       countdown=countdown {
+       }
+       datepicker=datepicker {
+       }
+       fancybox=fancybox {
+       }
+       jqgalview=jqgalview {
+       }
+       jqmodal=jqmodal {
+       }
+       minitabs=minitabs {
+       }
+       superfish=superfish {
+       }
+       tablesorter=tablesorter {
+        addons=addons {
+         pager=pager {
+         }
+        }
+        themes=themes {
+         blue=blue {
+         }
+         green=green {
+         }
+        }
+       }
+       thickbox=thickbox {
+       }
+       tooltip=tooltip {
+       }
+       treeview=treeview {
+       }
+       ui=ui {
+        images=images {
+        }
+       }
+      }
+     }
+    }
+    xartemplates=xartemplates {
+     message-confirm.xd
+     admin-confirmlogout.xt
+     admin-main-nooverview.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-release.xt
+     admin-sysinfo.xt
+     javascript-render.xt
+     message-exception.xt
+     message-systemerror.xt
+     message-systeminfo.xt
+     message-usererror.xt
+     pager-default.xt
+     pager-multipage.xt
+     pager-multipagenext.xt
+     pager-multipageprev.xt
+     pager-openended.xt
+     showoutput-tcolorpicker.xt
+     system-exception.xt
+     user-exception.xt
+     user-main.xt
+     blocks=blocks {
+      adminmenu_display.xt
+      content.xt
+      menu.xt
+      modify-adminmenu.xt
+      modify-content.xt
+      modify-finclude.xt
+      modify-html.xt
+      modify-menu.xt
+      modify-php.xt
+      modify-text.xt
+      sidemenu.xt
+      verticallistbycats.xt
+      verticallistbyname.xt
+      waitingcontent.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      modifyconfig-locales.xt
+      submenu.xt
+      img=img {
+      }
+      jquery=jquery {
+       init.xd
+       init.xt
+       events=events {
+        ready.xd
+       }
+       plugins=plugins {
+        bgiframe=bgiframe {
+         xarversion.php
+         docs=docs {
+         }
+         test=test {
+         }
+        }
+        center=center {
+         xarversion.php
+        }
+        chili=chili {
+         xarversion.php
+        }
+        cluetip=cluetip {
+         xarversion.php
+         images=images {
+         }
+        }
+        color=color {
+         xarversion.php
+        }
+        cookie=cookie {
+         xarversion.php
+        }
+        countdown=countdown {
+         xarversion.php
+        }
+        cycle=cycle {
+         xarversion.php
+        }
+        datepicker=datepicker {
+         xarversion.php
+        }
+        delegate=delegate {
+         xarversion.php
+        }
+        dimensions=dimensions {
+         xarversion.php
+        }
+        easing=easing {
+         xarversion.php
+        }
+        fancybox=fancybox {
+         xarversion.php
+        }
+        form=form {
+         xarversion.php
+        }
+        hoverintent=hoverintent {
+         xarversion.php
+        }
+        hovertip=hovertip {
+         xarversion.php
+        }
+        ifixpng=ifixpng {
+         xarversion.php
+        }
+        jcarousellite=jcarousellite {
+         xarversion.php
+        }
+        jqdnr=jqdnr {
+         xarversion.php
+        }
+        jqgalview=jqgalview {
+         xarversion.php
+         css=css {
+         }
+         img=img {
+         }
+        }
+        jqmodal=jqmodal {
+         xarversion.php
+        }
+        localscroll=localscroll {
+         xarversion.php
+        }
+        metadata=metadata {
+         xarversion.php
+        }
+        minitabs=minitabs {
+         xarversion.php
+        }
+        motdpopup=motdpopup {
+         xarversion.php
+        }
+        perciformes=perciformes {
+         xarversion.php
+        }
+        pngfix=pngfix {
+         xarversion.php
+        }
+        scrollto=scrollto {
+         xarversion.php
+        }
+        superfish=superfish {
+         xarversion.php
+         css=css {
+         }
+         images=images {
+         }
+        }
+        supersubs=supersubs {
+         xarversion.php
+        }
+        tablesorter=tablesorter {
+         xarversion.php
+         addons=addons {
+          pager=pager {
+           icons=icons {
+           }
+          }
+         }
+         docs=docs {
+          assets=assets {
+          }
+          css=css {
+          }
+          img=img {
+          }
+          js=js {
+           chili=chili {
+            js-jquery=js-jquery {
+            }
+           }
+          }
+         }
+         tests=tests {
+          assets=assets {
+           css=css {
+           }
+           img=img {
+           }
+          }
+         }
+         themes=themes {
+          blue=blue {
+          }
+          green=green {
+          }
+         }
+        }
+        thickbox=thickbox {
+         xarversion.php
+        }
+        timepicker=timepicker {
+         xarversion.php
+        }
+        tooltip=tooltip {
+         xarversion.php
+        }
+        treeview=treeview {
+         xarversion.php
+        }
+        truncator=truncator {
+         xarversion.php
+         dev=dev {
+         }
+        }
+        ui=ui {
+         xarversion.php
+         css=css {
+         }
+        }
+        uitablefilter=uitablefilter {
+         xarversion.php
+        }
+        validate=validate {
+         xarversion.php
+         localization=localization {
+         }
+        }
+        xpath=xpath {
+         xarversion.php
+        }
+       }
+      }
+     }
+     properties=properties {
+      showinput-array.xt
+      showinput-bltemplate.xt
+      showinput-calendar.xt
+      showinput-checkbox.xt
+      showinput-checkboxlist.xt
+      showinput-checkboxmask.xt
+      showinput-combobox.xt
+      showinput-countrylist.xt
+      showinput-dropdown.xt
+      showinput-extendeddate.xt
+      showinput-filelist.xt
+      showinput-fileupload.xt
+      showinput-hidden.xt
+      showinput-image.xt
+      showinput-imagelist.xt
+      showinput-multiselect.xt
+      showinput-orderselect.xt
+      showinput-radio.xt
+      showinput-statelist.xt
+      showinput-static.xt
+      showinput-tcolorpicker.xt
+      showinput-textarea.xt
+      showinput-textbox.xt
+      showinput-textupload.xt
+      showinput-timezone.xt
+      showinput-url.xt
+      showinput-urlicon.xt
+      showinput-urltitle.xt
+      showinput-webpage.xt
+      showoutput-array.xt
+      showoutput-bltemplate.xt
+      showoutput-calendar.xt
+      showoutput-checkbox.xt
+      showoutput-checkboxlist.xt
+      showoutput-checkboxmask.xt
+      showoutput-combobox.xt
+      showoutput-countrylist.xt
+      showoutput-dropdown.xt
+      showoutput-extendeddate.xt
+      showoutput-filelist.xt
+      showoutput-fileupload.xt
+      showoutput-floatbox.xt
+      showoutput-hidden.xt
+      showoutput-image.xt
+      showoutput-imagelist.xt
+      showoutput-multiselect.xt
+      showoutput-orderselect.xt
+      showoutput-statelist.xt
+      showoutput-static.xt
+      showoutput-tcolorpicker.xt
+      showoutput-textarea.xt
+      showoutput-textbox.xt
+      showoutput-textupload.xt
+      showoutput-timezone.xt
+      showoutput-url.xt
+      showoutput-urlicon.xt
+      showoutput-urltitle.xt
+      showoutput-webpage.xt
+      validation-bltemplate.xt
+      validation-calendar.xt
+      validation-dropdown.xt
+      validation-fileupload.xt
+      validation-floatbox.xt
+      validation-imagelist.xt
+      validation-numberbox.xt
+      validation-textarea.xt
+      validation-textbox.xt
+      validation-textupload.xt
+      validation-urlicon.xt
+     }
+    }
+    xaruser=xaruser {
+     main.php
+     rawexit.php
+     systemexit.php
+    }
+    xaruserapi=xaruserapi {
+     browse_files.php
+     checklink.php
+     decode_shorturl.php
+     dstadjust.php
+     dstrules.php
+     encode_shorturl.php
+     extractlinks.php
+     get_output_buffer.php
+     getfavicon.php
+     getfile.php
+     handletimesincetag.php
+     newcurl.php
+     timesince.php
+     timezones.php
+    }
+    xarversionsapi=xarversionsapi {
+     assert_application.php
+     compare.php
+     order.php
+     parse.php
+     unparse.php
+     validate.php
+    }
+    xarwidgets=xarwidgets {
+     calendarMenu.php
+    }
+   }
+   blocks=blocks {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     create_group.php
+     create_instance.php
+     delete_group.php
+     delete_instance.php
+     delete_type.php
+     main.php
+     modify_group.php
+     modify_instance.php
+     modifyconfig.php
+     new_group.php
+     new_instance.php
+     new_type.php
+     overview.php
+     settings.php
+     update_group.php
+     update_instance.php
+     update_type_info.php
+     view_groups.php
+     view_instances.php
+     view_types.php
+    }
+    xaradminapi=xaradminapi {
+     activate.php
+     block_type_exists.php
+     create_group.php
+     create_instance.php
+     create_type.php
+     deactivate.php
+     delete_cacheinstance.php
+     delete_group.php
+     delete_instance.php
+     delete_type.php
+     getinfo.php
+     getmenulinks.php
+     groupgetinfo.php
+     load.php
+     register_block_type.php
+     resequence.php
+     unregister_block_type.php
+     update_group.php
+     update_instance.php
+     update_instance_groups.php
+     update_type_info.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     user-group.xd
+     admin-delete_group.xt
+     admin-delete_instance.xt
+     admin-delete_type.xt
+     admin-main.xt
+     admin-modify_group.xt
+     admin-modify_instance.xt
+     admin-modifyconfig.xt
+     admin-new_group.xt
+     admin-new_instance.xt
+     admin-new_type.xt
+     admin-view_groups.xt
+     admin-view_instances.xt
+     admin-view_types.xt
+     user-display.xt
+     blocks=blocks {
+      bottomnav.xt
+      center.xt
+      default.xt
+      right.xt
+      topnav.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      compact.xt
+      plain.xt
+      plain2.xt
+     }
+    }
+    xaruser=xaruser {
+     display.php
+     group.php
+    }
+    xaruserapi=xaruserapi {
+     countblocktypes.php
+     drawstateicon.php
+     dropdownlist.php
+     get.php
+     getall.php
+     getallblocktypes.php
+     getallgroups.php
+     getblocktype.php
+     getcacheblock.php
+     getgroup.php
+     getinfo.php
+     getitemlinks.php
+     getitemtypes.php
+     groupgetinfo.php
+     handlestateicontag.php
+     reactivate_menus.php
+     read_type_info.php
+     read_type_init.php
+    }
+   }
+   bloggerapi=bloggerapi {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     overview.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+     updateconfig.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modifyconfig.xd
+     bloggerapi-getpost.xd
+     bloggerapi-getrecentposts.xd
+     bloggerapi-getuserinfo.xd
+     bloggerapi-getusersblogs.xd
+     bloggerapi-newpost.xd
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+    xaruserapi=xaruserapi {
+     deletepost.php
+     editpost.php
+     getdmap.php
+     getpost.php
+     getrecentposts.php
+     getuserinfo.php
+     getusersblogs.php
+     newpost.php
+    }
+   }
+   bookreviews=bookreviews {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     delete.php
+     edit.php
+     impexp.php
+     main.php
+     modifyconfig.php
+     view.php
+    }
+    xaradminapi=xaradminapi {
+     delete.php
+     getmenulinks.php
+     save.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xd
+     admin-edit.xd
+     admin-impexp.xd
+     admin-main.xd
+     admin-modifyconfig.xd
+     admin-view.xd
+     user-add.xd
+     user-browse.xd
+     user-preview.xd
+     user-search.xd
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+    xaruser=xaruser {
+     add.php
+     browse.php
+     preview.php
+     search.php
+    }
+    xaruserapi=xaruserapi {
+     count.php
+     get.php
+     getall.php
+    }
+   }
+   categories=categories {
+    xarinit.php
+    xarrenderer.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     checklinks.php
+     deletecat.php
+     main.php
+     modifycat.php
+     modifycatbase.php
+     modifyconfig.php
+     modifyconfighook.php
+     modifyhook.php
+     newhook.php
+     overview.php
+     privileges.php
+     stats.php
+     unlink.php
+     updatecat.php
+     updatecatbase.php
+     viewcatbases.php
+     viewcats.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     createcat.php
+     createcatdirectly.php
+     createhook.php
+     deletecat.php
+     deletehook.php
+     find_point_of_insertion.php
+     getmenulinks.php
+     linkcat.php
+     removehook.php
+     unlink.php
+     unlinkcids.php
+     updatecat.php
+     updateconfighook.php
+     updatehook.php
+    }
+    xarblocks=xarblocks {
+     modify-navigation.php
+     navigation.php
+    }
+    xarimages=xarimages {
+    }
+    xarincludes=xarincludes {
+     common=common {
+      defines.php
+     }
+    }
+    xarproperties=xarproperties {
+     Dynamic_Categories_Property.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-checklinks.xt
+     admin-config.xt
+     admin-delete.xt
+     admin-editcat.xt
+     admin-main.xt
+     admin-modifycatbase.xt
+     admin-modifyconfighook.xt
+     admin-modifyhook.xt
+     admin-newhook.xt
+     admin-privileges.xt
+     admin-stats.xt
+     admin-unlink.xt
+     admin-viewcatbases.xt
+     admin-viewcats-nocats.xt
+     admin-viewcats-render.xt
+     admin-viewcats.xt
+     user-catinfo.xt
+     user-main.xt
+     user-navigation-prevnext.xt
+     user-navigation-rootcats.xt
+     user-navigation-trails.xt
+     user-navigation-tree.xt
+     user-showfilter-form.xt
+     user-showfilter-tree.xt
+     visual-makeselect.xt
+     blocks=blocks {
+      nav-admin.xt
+      nav-prevnext.xt
+      nav-rootcats.xt
+      nav-trails.xt
+      nav-tree.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      cats-branch.xt
+      localization.xt
+     }
+     properties=properties {
+     }
+    }
+    xaruser=xaruser {
+     main.php
+    }
+    xaruserapi=xaruserapi {
+     categoryexists.php
+     cid2name.php
+     countcatbases.php
+     countcats.php
+     countitems.php
+     countitems_deprecated.php
+     decode_shorturl.php
+     deepcount.php
+     dropdownlist.php
+     encode_shorturl.php
+     filtertag.php
+     getallcatbases.php
+     getancestors.php
+     getcat.php
+     getcatbase.php
+     getcatbyname.php
+     getcatinfo.php
+     getcatinfotag.php
+     getchildren.php
+     getitemcats.php
+     getitemlinks.php
+     getlinks.php
+     getmodules.php
+     getneighbours.php
+     getorphanlinks.php
+     getparents.php
+     groupcount.php
+     isdescendant.php
+     leftjoin.php
+     name2cid.php
+     navigation.php
+     navigationtag.php
+     showfilter.php
+    }
+    xarvisualapi=xarvisualapi {
+     findimages.php
+     listarray.php
+     makeselect.php
+     treearray.php
+    }
+   }
+   comments=comments {
+    xarinit.php
+    xarrenderer.php
+    xartables.php
+    xaruser.php
+    xaruserapi.php
+    xarversion.php
+    xaradmin=xaradmin {
+     delete.php
+     importblacklist.php
+     main.php
+     modifyconfig.php
+     modifyconfighook.php
+     module_stats.php
+     overview.php
+     stats.php
+     updateconfig.php
+     view.php
+    }
+    xaradminapi=xaradminapi {
+     celko_analyze.php
+     celko_assign_slots.php
+     celko_reconstruct.php
+     celko_update.php
+     count_comments.php
+     delete_branch.php
+     delete_module_nodes.php
+     delete_node.php
+     delete_object_nodes.php
+     getmenulinks.php
+     import_blacklist.php
+     remove_module.php
+     updateconfighook.php
+    }
+    xarblocks=xarblocks {
+     latestcomments.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarincludes=xarincludes {
+     defines.php
+    }
+    xarproperties=xarproperties {
+     Dynamic_CommentsNumberOf_Property.php
+     Dynamic_Comments_Property.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xd
+     admin-importblacklist.xd
+     admin-main.xd
+     admin-modifyconfig.xd
+     admin-modifyconfighook.xd
+     admin-module_stats.xd
+     admin-stats.xd
+     admin-view.xd
+     user-delete.xd
+     user-deleteconf.xd
+     user-display.xd
+     user-displayall.xd
+     user-modifiedby.xd
+     user-modify.xd
+     user-reply.xd
+     user-rss.xd
+     user-search.xd
+     user-usermenu_form.xd
+     user-usermenu_icon.xd
+     blocks=blocks {
+      latestcommentsblock.xd
+      latestcommentsblockadmin.xd
+     }
+     includes=includes {
+      action_buttons.xd
+      admin-menu.xd
+      input-box.xd
+      modifyconfig_common.xd
+      option_bar.xd
+      view-flat.xd
+      view-nested.xd
+      view-threaded.xd
+     }
+     properties=properties {
+     }
+    }
+    xaruser=xaruser {
+     delete.php
+     display.php
+     displayall.php
+     main.php
+     modify.php
+     reply.php
+     rss.php
+     search.php
+     usermenu.php
+    }
+    xaruserapi=xaruserapi {
+     activate.php
+     add.php
+     add_rootnode.php
+     create_gap.php
+     deactivate.php
+     decode_shorturl.php
+     encode_shorturl.php
+     formhooks.php
+     get_author_count.php
+     get_blacklist.php
+     get_childcount.php
+     get_childcountlist.php
+     get_count.php
+     get_countlist.php
+     get_module_lrvalues.php
+     get_multiple.php
+     get_multipleall.php
+     get_node_lrvalues.php
+     get_node_root.php
+     get_object_list.php
+     get_object_maxright.php
+     get_one.php
+     getitemlinks.php
+     getitems.php
+     getmodules.php
+     getoptions.php
+     modify.php
+     remove_gap.php
+     search.php
+     setoptions.php
+    }
+   }
+   dynamicdata=dynamicdata {
+    xaradmin.php
+    xaradminapi.php
+    xarinit.php
+    xartables.php
+    xaruser.php
+    xaruserapi.php
+    xarutil.php
+    xarutilapi.php
+    xarversion.php
+    class=class {
+     datastores.php
+     interface.php
+     objects.php
+     properties.php
+    }
+    xaradmin=xaradmin {
+     create.php
+     delete.php
+     form.php
+     importpropertytypes.php
+     main.php
+     modify.php
+     modifyconfig.php
+     modifyconfighook.php
+     modifyhook.php
+     modifyprop.php
+     new.php
+     newhook.php
+     orderprops.php
+     overview.php
+     privileges.php
+     query.php
+     showpropval.php
+     update.php
+     updateconfig.php
+     updateprop.php
+     utilities.php
+     view.php
+    }
+    xaradminapi=xaradminapi {
+     browse.php
+     checkinput.php
+     create.php
+     createhook.php
+     createobject.php
+     createproperty.php
+     delete.php
+     deletehook.php
+     deleteobject.php
+     deleteprop.php
+     getmenulinks.php
+     handleformtag.php
+     handleinputtag.php
+     handlelisttag.php
+     importpropertytypes.php
+     menu.php
+     removehook.php
+     showform.php
+     showinput.php
+     showlist.php
+     syncprops.php
+     update.php
+     updateconfighook.php
+     updatehook.php
+     updateprop.php
+    }
+    xarblocks=xarblocks {
+     form.php
+     modify-form.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarproperties=xarproperties {
+     Dynamic_DataSource_Property.php
+     Dynamic_FieldStatus_Property.php
+     Dynamic_FieldType_Property.php
+     Dynamic_ItemID_Property.php
+     Dynamic_ItemType_Property.php
+     Dynamic_ObjectRef_Property.php
+     Dynamic_Object_Property.php
+     Dynamic_SubForm_Property.php
+     Dynamic_Validation_Property.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xt
+     admin-form.xt
+     admin-main.xt
+     admin-menu.xt
+     admin-modify.xt
+     admin-modifyconfig.xt
+     admin-modifyconfighook.xt
+     admin-modifyhook.xt
+     admin-modifyprop.xt
+     admin-new.xt
+     admin-newhook.xt
+     admin-privileges.xt
+     admin-query.xt
+     admin-showform.xt
+     admin-showinput-hardcore.xt
+     admin-showlist.xt
+     admin-showpropval.xt
+     admin-utilities.xt
+     admin-view.xt
+     user-display.xt
+     user-displayhook.xt
+     user-main.xt
+     user-menu.xt
+     user-search.xt
+     user-showdisplay.xt
+     user-showview.xt
+     user-view.xt
+     util-export.xt
+     util-import.xt
+     util-main.xt
+     util-meta.xt
+     util-migrate.xt
+     util-relations.xt
+     util-static.xt
+     blocks=blocks {
+      form.xt
+      modify-form.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      catnavigation.xt
+      editproperty.xt
+      manage-menu.xt
+      newproperty.xt
+      objectlist-cells.xt
+      objectlist-default.xt
+      objectlist-list.xt
+      objectlist-subform.xt
+      objectlist-table.xt
+      proplist-default.xt
+      proplist-list.xt
+      utility-menu.xt
+     }
+     objects=objects {
+      showdisplay.xt
+      showform.xt
+      showlist.xt
+      showview.xt
+     }
+     properties=properties {
+      label.xt
+      showhidden.xt
+      showinput-itemid.xt
+      showinput-itemtype.xt
+      showinput-objectref.xt
+      showinput-subform.xt
+      showinput.xt
+      showoutput-itemtype.xt
+      showoutput-objectref.xt
+      showoutput-subform.xt
+      showoutput.xt
+      validation-itemtype.xt
+      validation-objectref.xt
+      validation-subform.xt
+      validation.xt
+     }
+    }
+    xartests=xartests {
+    }
+    xaruser=xaruser {
+     display.php
+     displayhook.php
+     main.php
+     search.php
+     view.php
+    }
+    xaruserapi=xaruserapi {
+     countitems.php
+     decode_shorturl.php
+     dropdownlist.php
+     encode_shorturl.php
+     get.php
+     getall.php
+     getfield.php
+     getitem.php
+     getitemfields.php
+     getitemfordisplay.php
+     getitemlinks.php
+     getitems.php
+     getitemsforview.php
+     getitemtypes.php
+     getmenulinks.php
+     getmodules.php
+     getobject.php
+     getobjectinfo.php
+     getobjectlist.php
+     getobjects.php
+     getprop.php
+     getproperty.php
+     getproptypes.php
+     getsources.php
+     handledisplaytag.php
+     handlegetitemstag.php
+     handlegetitemtag.php
+     handlelabeltag.php
+     handleobjecttag.php
+     handleoutputtag.php
+     handleviewtag.php
+     interface.php
+     menu.php
+     showdisplay.php
+     showoutput.php
+     showview.php
+    }
+    xarutil=xarutil {
+     export.php
+     import.php
+     importprops.php
+     main.php
+     meta.php
+     migrate.php
+     relations.php
+     static.php
+    }
+    xarutilapi=xarutilapi {
+     demolist.php
+     export.php
+     getmeta.php
+     getrelations.php
+     getstatic.php
+     import.php
+     importproperties.php
+     maketable.php
+     migrate.php
+     updatehooks.php
+    }
+   }
+   headlines=headlines {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     create.php
+     delete.php
+     import.php
+     importitem.php
+     main.php
+     modify.php
+     modifyconfig.php
+     new.php
+     overview.php
+     settings.php
+     update.php
+     updateconfig.php
+     view.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     delete.php
+     getmenulinks.php
+     import.php
+     update.php
+    }
+    xarblocks=xarblocks {
+     cloud.php
+     rss.php
+    }
+    xarschedulerapi=xarschedulerapi {
+     compare.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xd
+     admin-main.xd
+     admin-modify.xd
+     admin-modifyconfig.xd
+     admin-new.xd
+     admin-view.xd
+     user-main.xd
+     user-my.xd
+     user-view.xd
+     blocks=blocks {
+      cloud.xd
+      modify-cloud.xd
+      modify-rss.xd
+      rss.xd
+     }
+     includes=includes {
+      admin-menu.xd
+      compact.xd
+      icons.xd
+      plain.xd
+     }
+    }
+    xaruser=xaruser {
+     main.php
+     my.php
+     view.php
+    }
+    xaruserapi=xaruserapi {
+     countitems.php
+     decode_shorturl.php
+     encode_shorturl.php
+     get.php
+     getall.php
+     getitemlinks.php
+     getitemtypes.php
+     getparsed.php
+     process.php
+     update.php
+    }
+   }
+   html=html {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     create.php
+     createtype.php
+     delete.php
+     deletetype.php
+     edit.php
+     edittype.php
+     main.php
+     modifyconfig.php
+     new.php
+     newtype.php
+     overview.php
+     set.php
+     updateset.php
+     viewtypes.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     createtype.php
+     delete.php
+     deletetype.php
+     edit.php
+     edittype.php
+     getmenulinks.php
+     menu.php
+     update.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-delete.xt
+     admin-deletetype.xt
+     admin-edit.xt
+     admin-edittype.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-new.xt
+     admin-newtype.xt
+     admin-set.xt
+     admin-viewtypes.xt
+     includes=includes {
+      admin-menu.xt
+     }
+    }
+    xaruserapi=xaruserapi {
+     countitems.php
+     getalltags.php
+     getalltypes.php
+     gettag.php
+     gettype.php
+     transforminput.php
+     transformoutput.php
+    }
+   }
+   installer=installer {
+    xaradmin.php
+    xaradminapi.php
+    xarfunctions.php
+    xarinit.php
+    xarversion.php
+    upgrades=upgrades {
+     myphpnuke=myphpnuke {
+     }
+     phpnuke=phpnuke {
+      54.php
+     }
+     postnuke=postnuke {
+      71.php
+     }
+    }
+    xarconfigurations=xarconfigurations {
+     community.conf.php
+     core.conf.php
+     coremoduleslist.php
+     intranet.conf.php
+     public.conf.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-choose_configuration.xt
+     admin-cleanup.xt
+     admin-confirm_configuration.xt
+     admin-create_administrator.xt
+     admin-main.xt
+     admin-phase1.xt
+     admin-phase2.xt
+     admin-phase3.xt
+     admin-phase4.xt
+     admin-phase5.xt
+     admin-upgrade1.xt
+     admin-upgrade2.xt
+     admin-upgrade3.xt
+     admin-upgrade4.xt
+     includes=includes {
+      status.xt
+      upstatus.xt
+     }
+    }
+   }
+   julian=julian {
+    class.calendar.php
+    class.event.php
+    class.ical_parser.php
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     delete.php
+     deleteevent.php
+     main.php
+     modifycategories.php
+     modifyconfig.php
+     overview.php
+     privileges.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     delete.php
+     deleteevent.php
+     getmenulinks.php
+     update.php
+    }
+    xarblocks=xarblocks {
+     calevent.php
+     calmonth.php
+     modify-calevent.php
+     modify-calmonth.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarjavascript=xarjavascript {
+     img=img {
+     }
+    }
+    xarschedulerapi=xarschedulerapi {
+     email_alerts.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modifycategories.xd
+     admin-modifyconfig.xd
+     admin-privileges.xd
+     user-addevent.xd
+     user-alerts.xd
+     user-day.xd
+     user-displayhook.xd
+     user-edit.xd
+     user-edithook.xd
+     user-main.xd
+     user-month.xd
+     user-test.xd
+     user-viewevent.xd
+     user-viewevents.xd
+     user-week.xd
+     user-year.xd
+     blocks=blocks {
+      calevent.xd
+      calmonth.xd
+      modify-calevent.xd
+      modify-calmonth.xd
+     }
+     includes=includes {
+      event-time.xd
+      footer.xd
+      header.xd
+      modify-datetime.xd
+      view-events-tabular.xd
+     }
+    }
+    xaruser=xaruser {
+     addevent.php
+     alerts.php
+     day.php
+     displayhook.php
+     edit.php
+     export.php
+     jump.php
+     main.php
+     modifyhook.php
+     month.php
+     newhook.php
+     test.php
+     updateevent.php
+     viewevent.php
+     viewevents.php
+     week.php
+     year.php
+    }
+    xaruserapi=xaruserapi {
+     countevents.php
+     createhook.php
+     createuserdatetime.php
+     dayis.php
+     decode_shorturl.php
+     deletehook.php
+     email_alerts.php
+     encode_shorturl.php
+     factory.php
+     get.php
+     getall.php
+     getallsubscriptions.php
+     getcategories.php
+     getcolor.php
+     geteventinfo.php
+     getevents.php
+     gethooked.php
+     getitemlinks.php
+     getitemtypes.php
+     getmenulinks.php
+     getmonthnamelong.php
+     getmonthnameshort.php
+     getorganizers.php
+     getuserdatetimeinfo.php
+     getuseroptions.php
+     init.php
+     next.php
+     prev.php
+     updatehook.php
+    }
+   }
+   magpie=magpie {
+    xarinit.php
+    xarversion.php
+    xarclass=xarclass {
+     extlib=extlib {
+     }
+    }
+    xardocs=xardocs {
+    }
+    xaruser=xaruser {
+     main.php
+    }
+    xaruserapi=xaruserapi {
+     process.php
+    }
+   }
+   mail=mail {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     compose.php
+     main.php
+     modifyconfig.php
+     overview.php
+     sendtest.php
+     template.php
+     updateconfig.php
+     viewq.php
+    }
+    xaradminapi=xaradminapi {
+     _queuemail.php
+     _sendmail.php
+     getmenulinks.php
+     getmessageincludestring.php
+     getmessagestrings.php
+     getmessagetemplates.php
+     hookmailchange.php
+     hookmailcreate.php
+     hookmaildelete.php
+     replace.php
+     sendhtmlmail.php
+     sendmail.php
+     updatemessagestrings.php
+    }
+    xarclass=xarclass {
+     class.phpmailer.php
+     class.smtp.php
+     language=language {
+      phpmailer.lang-br.php
+      phpmailer.lang-ca.php
+      phpmailer.lang-cz.php
+      phpmailer.lang-de.php
+      phpmailer.lang-dk.php
+      phpmailer.lang-en.php
+      phpmailer.lang-es.php
+      phpmailer.lang-fi.php
+      phpmailer.lang-fo.php
+      phpmailer.lang-fr.php
+      phpmailer.lang-hu.php
+      phpmailer.lang-it.php
+      phpmailer.lang-ja.php
+      phpmailer.lang-nl.php
+      phpmailer.lang-no.php
+      phpmailer.lang-pl.php
+      phpmailer.lang-ro.php
+      phpmailer.lang-ru.php
+      phpmailer.lang-se.php
+      phpmailer.lang-tr.php
+     }
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     sendmail.php
+    }
+    xartemplates=xartemplates {
+     admin-compose.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-sendmail-html.xt
+     admin-sendmail-text.xt
+     admin-template.xt
+     admin-viewq.xt
+     includes=includes {
+      admin-menu.xt
+     }
+    }
+   }
+   mime=mime {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     updateconfig.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarincludes=xarincludes {
+     mime.magic.php
+    }
+    xartemplates=xartemplates {
+     admin-modifyconfig.xd
+    }
+    xaruserapi=xaruserapi {
+     add_extension.php
+     add_magic.php
+     add_subtype.php
+     add_type.php
+     analyze_file.php
+     array_search_r.php
+     extension_to_mime.php
+     get_extension.php
+     get_magic.php
+     get_mime_image.php
+     get_mimetype.php
+     get_rev_mimetype.php
+     get_subtype.php
+     get_type.php
+     getall_extensions.php
+     getall_magic.php
+     getall_subtypes.php
+     getall_types.php
+     import_mimelist.php
+     mime_to_extension.php
+    }
+   }
+   modules=modules {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     activate.php
+     deactivate.php
+     hooks.php
+     install.php
+     installall.php
+     list.php
+     main.php
+     modify.php
+     modifyconfig.php
+     modinfo.php
+     overview.php
+     prefs.php
+     regenerate.php
+     release.php
+     remove.php
+     settings.php
+     tools.php
+     update.php
+     updateconfig.php
+     updatehooks.php
+     updateversion.php
+     upgrade.php
+     viewerror.php
+    }
+    xaradminapi=xaradminapi {
+     activate.php
+     add_module_alias.php
+     checkmissing.php
+     checknew.php
+     checkversion.php
+     deactivate.php
+     deactivatewithdependents.php
+     delete_module_alias.php
+     disablehooks.php
+     enablehooks.php
+     executeinitfunction.php
+     getalldependencies.php
+     getalldependents.php
+     getdbmodules.php
+     geteventhandlers.php
+     getfilemodules.php
+     gethookedmodules.php
+     gethooklist.php
+     getlist.php
+     getmenulinks.php
+     initialise.php
+     installwithdependencies.php
+     list.php
+     regenerate.php
+     remove.php
+     removemissing.php
+     removewithdependents.php
+     set_pref_defaults.php
+     setstate.php
+     update.php
+     updatehooks.php
+     updateproperties.php
+     updateversion.php
+     upgrade.php
+     verifydependency.php
+    }
+    xarimages=xarimages {
+    }
+    xarproperties=xarproperties {
+     Dynamic_Module_Property.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-coreconflict.xt
+     admin-deactivate.xt
+     admin-errorupdate.xt
+     admin-hooks.xt
+     admin-install.xt
+     admin-list.xt
+     admin-main.xt
+     admin-missing.xt
+     admin-modify.xt
+     admin-modifyconfig.xt
+     admin-modinfo.xt
+     admin-pref.xt
+     admin-prefs.xt
+     admin-release.xt
+     admin-remove.xt
+     admin-tools.xt
+     admin-upgrade.xt
+     blanktpl.xt
+     includes=includes {
+      admin-menu.xt
+      hooks-mainpart.xt
+      install-errors.xt
+     }
+    }
+   }
+   paypalipn=paypalipn {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     getmenulinks.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modifyconfig.xd
+    }
+    xaruser=xaruser {
+     main.php
+    }
+    xaruserapi=xaruserapi {
+     get.php
+    }
+   }
+   paypalsetup=paypalsetup {
+    xaradmin.php
+    xaradminapi.php
+    xarinit.php
+    xarversion.php
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarproperties=xarproperties {
+     Dynamic_PayPalCart_Property.php
+     Dynamic_PayPalDonate_Property.php
+     Dynamic_PayPalNow_Property.php
+     Dynamic_PayPalSubscription_Property.php
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modifyconfig.xd
+     properties=properties {
+     }
+    }
+   }
+   privileges=privileges {
+    xarinit.php
+    xarprivileges.php
+    xarsetup.php
+    xartables.php
+    xartreerenderer.php
+    xarversion.php
+    xaradmin=xaradmin {
+     addmember.php
+     addprivilege.php
+     deleteprivilege.php
+     deleterealm.php
+     displayprivilege.php
+     main.php
+     modifyconfig.php
+     modifyprivilege.php
+     modifyrealm.php
+     newprivilege.php
+     newrealm.php
+     overview.php
+     removebranch.php
+     removemember.php
+     removerole.php
+     updateprivilege.php
+     viewprivileges.php
+     viewrealms.php
+     viewroles.php
+    }
+    xaradminapi=xaradminapi {
+     createobjects.php
+     getmenulinks.php
+     menu.php
+     removemember.php
+    }
+    xarimages=xarimages {
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-deleteprivilege.xt
+     admin-deleterealm.xt
+     admin-displayprivilege.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-modifyprivilege.xt
+     admin-modifyrealm.xt
+     admin-newprivilege.xt
+     admin-newrealm.xt
+     admin-removerole.xt
+     admin-showroles.xt
+     admin-viewprivileges.xt
+     admin-viewrealms.xt
+     admin-viewroles.xt
+     includes=includes {
+      admin-menu.xt
+      admin-realms.xt
+      tablist.xt
+     }
+     objects=objects {
+      showlist-privileges.xt
+     }
+    }
+    xartests=xartests {
+     testbugs.php
+    }
+   }
+   registration=registration {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     overview.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+    }
+    xarblocks=xarblocks {
+     modify-rlogin.php
+     rlogin.php
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     expire.php
+    }
+    xartemplates=xartemplates {
+     admin-main.xt
+     admin-modifyconfig.xt
+     user-checkage.xt
+     user-confirmregistration.xt
+     user-newusernotification-html.xt
+     user-newusernotification-text.xt
+     user-privacy.xt
+     user-registerform.xt
+     user-startvalidation.xt
+     user-terms.xt
+     user-waitingconfirm.xt
+     blocks=blocks {
+      logout.xt
+      modify-rlogin.xt
+      rlogin.xt
+     }
+     includes=includes {
+      admin-menu.xt
+     }
+    }
+    xaruser=xaruser {
+     main.php
+     privacy.php
+     register.php
+     terms.php
+    }
+    xaruserapi=xaruserapi {
+     checkvar.php
+     createnotify.php
+     createstate.php
+     createuser.php
+     decode_shorturl.php
+     encode_shorturl.php
+     getmenulinks.php
+     notifyadmin.php
+     validatevar.php
+    }
+   }
+   roles=roles {
+    xarinit.php
+    xarroles.php
+    xartables.php
+    xartreerenderer.php
+    xarversion.php
+    xaradmin=xaradmin {
+     addmember.php
+     addprivilege.php
+     addrole.php
+     asknotification.php
+     createmail.php
+     createpassword.php
+     deleterole.php
+     displayrole.php
+     main.php
+     modifyconfig.php
+     modifyemail.php
+     modifynotice.php
+     modifyrole.php
+     new.php
+     newrole.php
+     overview.php
+     purge.php
+     removemember.php
+     removeprivilege.php
+     sendmail.php
+     showprivileges.php
+     showusers.php
+     sitelock.php
+     testprivileges.php
+     updaterole.php
+     updatestate.php
+     viewroles.php
+    }
+    xaradminapi=xaradminapi {
+     addgroup.php
+     addmember.php
+     checkduv.php
+     clearsessions.php
+     create.php
+     delete.php
+     deletegroup.php
+     deleteuser.php
+     getallgroups.php
+     getgroupmenulinks.php
+     getmenulinks.php
+     getmessageincludestring.php
+     getmessagestrings.php
+     menu.php
+     purge.php
+     recall.php
+     renamegroup.php
+     senduseremail.php
+     stateupdate.php
+     update.php
+     viewgroup.php
+    }
+    xarblocks=xarblocks {
+     language.php
+     modify-online.php
+     online.php
+     user.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarincludes=xarincludes {
+     xarQuery.php
+    }
+    xarproperties=xarproperties {
+     Dynamic_AIM_Property.php
+     Dynamic_Affero_Property.php
+     Dynamic_Email_Property.php
+     Dynamic_GroupList_Property.php
+     Dynamic_ICQ_Property.php
+     Dynamic_MSN_Property.php
+     Dynamic_PassBox_Property.php
+     Dynamic_UserList_Property.php
+     Dynamic_Username_Property.php
+     Dynamic_Yahoo_Property.php
+    }
+    xarschedulerapi=xarschedulerapi {
+     expire.php
+    }
+    xarstyles=xarstyles {
+    }
+    xartemplates=xartemplates {
+     admin-asknotification.xt
+     admin-createmail.xt
+     admin-createpassword.xt
+     admin-createuser.xt
+     admin-deleterole.xt
+     admin-displayrole.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-modifyemail.xt
+     admin-modifynotice.xt
+     admin-modifyrole.xt
+     admin-newrole.xt
+     admin-purge.xt
+     admin-removeprivilege.xt
+     admin-showprivileges.xt
+     admin-showusers.xt
+     admin-sitelock.xt
+     admin-testprivileges.xt
+     admin-updatestate.xt
+     admin-viewroles.xt
+     admin-welcomeemail.xt
+     user-account.xt
+     user-checkage.xt
+     user-confirmregistration.xt
+     user-display.xt
+     user-email.xt
+     user-getvalidation.xt
+     user-homedisplay.xt
+     user-new.xt
+     user-privacy.xt
+     user-registerform.xt
+     user-requestpw.xt
+     user-requestpwconfirm.xt
+     user-search.xt
+     user-startvalidation.xt
+     user-terms.xt
+     user-user_menu_form.xt
+     user-user_menu_icon.xt
+     user-view.xt
+     user-viewtree.xt
+     user-waitingconfirm.xt
+     blocks=blocks {
+      language.xt
+      modify-online.xt
+      online.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      tablist.xt
+      tree.xt
+     }
+     objects=objects {
+      deleteuser-leaf.xt
+      drawing-B.xt
+      drawing-I.xt
+      drawing-L.xt
+      drawing-T.xt
+      drawing-collapsedbox.xt
+      drawing-container.xt
+      drawing-emptybox.xt
+      drawing-expandedbox.xt
+      drawing-tree.xt
+      email-leaf.xt
+      generic-leaf.xt
+      large-spacer.xt
+      modifyuser-leaf.xt
+      placeholder-leaf.xt
+      showprivileges-leaf.xt
+      showuser-leaf.xt
+      small-spacer.xt
+      testprivileges-leaf.xt
+      tree-leafitem.xt
+     }
+     properties=properties {
+      showinput-affero.xt
+      showinput-aim.xt
+      showinput-email.xt
+      showinput-grouplist.xt
+      showinput-icq.xt
+      showinput-msn.xt
+      showinput-password.xt
+      showinput-userlist.xt
+      showinput-username.xt
+      showinput-yahoo.xt
+      showoutput-affero.xt
+      showoutput-aim.xt
+      showoutput-email.xt
+      showoutput-grouplist.xt
+      showoutput-icq.xt
+      showoutput-msn.xt
+      showoutput-password.xt
+      showoutput-userlist.xt
+      showoutput-username.xt
+      showoutput-yahoo.xt
+      validation-userlist.xt
+     }
+    }
+    xaruser=xaruser {
+     account.php
+     changelanguage.php
+     display.php
+     email.php
+     getvalidation.php
+     lostpassword.php
+     main.php
+     search.php
+     usermenu.php
+     view.php
+     viewtree.php
+    }
+    xaruserapi=xaruserapi {
+     addmember.php
+     checkprivilege.php
+     countall.php
+     countallactive.php
+     countgroups.php
+     countitems.php
+     decode_shorturl.php
+     encode_shorturl.php
+     get.php
+     getactive.php
+     getall.php
+     getallactive.php
+     getallgroups.php
+     getancestors.php
+     getdefaultauthdata.php
+     getdefaultgroup.php
+     getdefaultregdata.php
+     getdeleteduser.php
+     getitemlinks.php
+     getitemtypes.php
+     getmenulinks.php
+     getusers.php
+     leftjoin.php
+     login.php
+     makepass.php
+     removemember.php
+     updatestatus.php
+     userhome.php
+     validatevar.php
+    }
+   }
+   scheduler=scheduler {
+    run_scheduler.php
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modify.php
+     modifyconfig.php
+     overview.php
+     search.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     create.php
+     delete.php
+     getmenulinks.php
+     update.php
+    }
+    xarblocks=xarblocks {
+     trigger.php
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modify.xd
+     admin-modifyconfig.xd
+     admin-search.xd
+     blocks=blocks {
+      triggerAdmin.xd
+     }
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+    xaruser=xaruser {
+     main.php
+    }
+    xaruserapi=xaruserapi {
+     get.php
+     getall.php
+     intervals.php
+     nextrun.php
+     runjobs.php
+    }
+   }
+   search=search {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     overview.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+    }
+    xarblocks=xarblocks {
+     search.php
+    }
+    xardocs=xardocs {
+    }
+    xartemplates=xartemplates {
+     admin-modifyconfig.xd
+     admin-overview.xd
+     user-handlesearch.xd
+     user-main.xd
+     user-opensearch.xd
+     user-searchform.xd
+     blocks=blocks {
+      search.xd
+     }
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+    xaruser=xaruser {
+     handlesearch.php
+     main.php
+     opensearch.php
+     searchform.php
+    }
+   }
+   sitetools=sitetools {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     backup.php
+     cacheview.php
+     deletecache.php
+     downloadbkup.php
+     downloaddel.php
+     links.php
+     main.php
+     modifyconfig.php
+     optimize.php
+     overview.php
+     terminal.php
+     updateconfig.php
+    }
+    xaradminapi=xaradminapi {
+     backupdb.php
+     checklinks.php
+     countitems.php
+     create.php
+     findlinks.php
+     ftpbackup.php
+     getall.php
+     getlinkfields.php
+     getmenulinks.php
+     gettabledata.php
+     menu.php
+     optimizedb.php
+    }
+    xarclass=xarclass {
+     dbSiteTools.php
+     dbSiteTools_mysql.php
+     dbSiteTools_oci8.php
+     dbSiteTools_postgres.php
+     dbSiteTools_sqlite.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     backup.php
+     optimize.php
+    }
+    xartemplates=xartemplates {
+     admin-backup.xd
+     admin-cacheview.xd
+     admin-deletecache.xd
+     admin-downloaddel.xd
+     admin-links.xd
+     admin-main.xd
+     admin-menu.xd
+     admin-modifyconfig.xd
+     admin-optimize.xd
+     admin-terminal.xd
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+   }
+   subscriptions=subscriptions {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     addmembers.php
+     delete.php
+     deletesub.php
+     import.php
+     main.php
+     managesubs.php
+     modifyconfig.php
+     modifymember.php
+     reports.php
+     updatemember.php
+     viewmembers.php
+     viewsubs.php
+    }
+    xaradminapi=xaradminapi {
+     calculatedates.php
+     create.php
+     createsub.php
+     delete.php
+     deletesub.php
+     demote.php
+     editsub.php
+     getmenulinks.php
+     promote.php
+    }
+    xarblocks=xarblocks {
+     subscription.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     cleandb.php
+     reminders.php
+     unsubscribe.php
+    }
+    xartemplates=xartemplates {
+     admin-addmembers.xd
+     admin-delete.xd
+     admin-deletesub.xd
+     admin-import.xd
+     admin-main.xd
+     admin-managesubs.xd
+     admin-modifyconfig.xd
+     admin-modifymember.xd
+     admin-new.xd
+     admin-reports.xd
+     admin-view.xd
+     admin-viewmembers.xd
+     user-subscribe.xd
+     user-user_menu_form.xd
+     user-user_menu_icon.xd
+     user-view.xd
+     blocks=blocks {
+      subscription.xd
+     }
+     includes=includes {
+      admin-menu.xd
+      user-menu.xd
+     }
+    }
+    xaruser=xaruser {
+     subscribe.php
+     usermenu.php
+     view.php
+    }
+    xaruserapi=xaruserapi {
+     countitems.php
+     get.php
+     getall.php
+     getallsubs.php
+     getsub.php
+    }
+   }
+   themes=themes {
+    xaradmin.php
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     activate.php
+     corecssupdate.php
+     cssconfig.php
+     deactivate.php
+     initialise.php
+     install.php
+     list.php
+     listtpltags.php
+     main.php
+     modify.php
+     modifyconfig.php
+     modifytpltag.php
+     overview.php
+     regenerate.php
+     release.php
+     remove.php
+     removetpltag.php
+     setdefault.php
+     settings.php
+     themesinfo.php
+     update.php
+     updateconfig.php
+     updatetpltag.php
+     upgrade.php
+     viewerror.php
+    }
+    xaradminapi=xaradminapi {
+     activate.php
+     checkmissing.php
+     checknew.php
+     getdbthemes.php
+     getfilethemes.php
+     getlist.php
+     getmenulinks.php
+     getthemelist.php
+     gettpltag.php
+     gettpltaglist.php
+     initialise.php
+     install.php
+     installwithdependencies.php
+     list.php
+     regenerate.php
+     remove.php
+     setstate.php
+     themedir2name.php
+     update.php
+     upgrade.php
+    }
+    xarblocks=xarblocks {
+     meta.php
+    }
+    xarclass=xarclass {
+     xarcss.class.php
+    }
+    xarcssapi=xarcssapi {
+     delivercss.php
+     registercss.php
+     registercsstags.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-blerror.xt
+     admin-cssconfig.xt
+     admin-errorupdate.xt
+     admin-list.xt
+     admin-listtpltags.xt
+     admin-main.xt
+     admin-missing.xt
+     admin-modify.xt
+     admin-modifyconfig.xt
+     admin-modifytpltag.xt
+     admin-release.xt
+     admin-themesinfo.xt
+     user-additionalstyles.xt
+     user-usermenu_form.xt
+     user-usermenu_icon.xt
+     blocks=blocks {
+      meta.xt
+      metaAdmin.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      corecss.xt
+      modulescss.xt
+      navtabs.xt
+      showimg.xt
+      themescss.xt
+     }
+    }
+    xaruser=xaruser {
+     usermenu.php
+    }
+    xaruserapi=xaruserapi {
+     deliver.php
+     handlecsstags.php
+     register.php
+    }
+   }
+   worldpay=worldpay {
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     modifyconfig.php
+     overview.php
+    }
+    xaradminapi=xaradminapi {
+     payment.php
+     paymenthook.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     admin-modifyconfig.xd
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+   }
+   xarcachemanager=xarcachemanager {
+    xareventapi.php
+    xarinit.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     blocks.php
+     flushcache.php
+     main.php
+     modifyconfig.php
+     modifyhook.php
+     overview.php
+     pages.php
+     queries.php
+     stats.php
+     updateconfig.php
+     view.php
+    }
+    xaradminapi=xaradminapi {
+     config_tpl_prep.php
+     convertseconds.php
+     createhook.php
+     deletehook.php
+     get_cachingconfig.php
+     getblocks.php
+     getcachedirs.php
+     getcachekeys.php
+     getcachesize.php
+     getcachetypes.php
+     getmenulinks.php
+     getqueries.php
+     regenstatic.php
+     restore_cachingconfig.php
+     save_cachingconfig.php
+     updateconfighook.php
+     updatehook.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarschedulerapi=xarschedulerapi {
+     prefetch.php
+    }
+    xarscripts=xarscripts {
+     regenerate_static.php
+    }
+    xartemplates=xartemplates {
+     admin-blocks.xd
+     admin-flushcache.xd
+     admin-main.xd
+     admin-modifyconfig.xd
+     admin-modifyhook.xd
+     admin-pages.xd
+     admin-queries.xd
+     admin-stats.xd
+     includes=includes {
+      admin-menu.xd
+     }
+    }
+   }
+   xarpages=xarpages {
+    xarcustomapi.php
+    xarinit.php
+    xarmultiformapi.php
+    xartables.php
+    xarversion.php
+    xaradmin=xaradmin {
+     delete.php
+     deletepage.php
+     deletetype.php
+     main.php
+     modify.php
+     modifyconfig.php
+     modifypage.php
+     modifytype.php
+     new.php
+     newpage.php
+     newtype.php
+     overview.php
+     updatepage.php
+     updatetype.php
+     viewpages.php
+     viewtypes.php
+    }
+    xaradminapi=xaradminapi {
+     createpage.php
+     createtype.php
+     deletepage.php
+     deletetype.php
+     getmenulinks.php
+     updatepage.php
+     updatetype.php
+    }
+    xarblocks=xarblocks {
+     crumb.php
+     menu.php
+     modify-crumb.php
+     modify-menu.php
+    }
+    xarcustomapi=xarcustomapi {
+     ex2action.php
+     formaction_template.php
+     multiform_example1.php
+     pageform_helpers.php
+     regdemoaction.php
+    }
+    xardata=xardata {
+    }
+    xardecodeapi=xardecodeapi {
+     example.php
+    }
+    xardocs=xardocs {
+    }
+    xarencodeapi=xarencodeapi {
+     example.php
+    }
+    xarfuncapi=xarfuncapi {
+     addblock.php
+     capture_person_file.php
+     enforce_nonssl.php
+     enforce_ssl.php
+     example.php
+     facet.php
+     mag.php
+     multiform.php
+     news.php
+     null.php
+     page_tabs.php
+     pageaction.php
+     pageform.php
+     redirect.php
+    }
+    xarimages=xarimages {
+    }
+    xarstyles=xarstyles {
+     block_side_menu1.php
+    }
+    xartemplates=xartemplates {
+     admin-deletepage.xt
+     admin-deletetype.xt
+     admin-main.xt
+     admin-modifyconfig.xt
+     admin-modifypage.xt
+     admin-modifytype.xt
+     admin-viewpages.xt
+     admin-viewtypes.xt
+     article-display-news.xt
+     article-display.xt
+     article-summary-news.xt
+     article-summary.xt
+     facet-display.xt
+     facet-summary.xt
+     func-page_tabs.xt
+     page-facet.xt
+     page-html-custom.xt
+     page-html-external.xt
+     page-html.xt
+     page-multiform.xt
+     page-multiform_master.xt
+     page-news.xt
+     page-pageaction.xt
+     page-pageform.xt
+     page-standard.xt
+     user-display.xt
+     blocks=blocks {
+      crumb.xt
+      menu-css-side-menu1.xt
+      menu-level1.xt
+      menu-level2.xt
+      menu.xt
+      modify-crumb.xt
+      modify-menu.xt
+     }
+     includes=includes {
+      admin-menu.xt
+      common.xt
+      localization.xt
+      menu-css-side-menu1.xt
+      menu-level1.xt
+      menu.xt
+      multiform-buttons.xt
+      multiform-debug.xt
+      multiform-progress.xt
+      news-archive-list.xt
+      news-nextprev.xt
+      news-searchbox.xt
+      page-branch.xt
+      user-navbar.xt
+     }
+     rss=rss {
+      article-summary.xt
+      page-news.xt
+     }
+    }
+    xartreeapi=xartreeapi {
+     array_maptree.php
+     getancestors.php
+     getleftright.php
+     getnextsibling.php
+     getparent.php
+     getprevsibling.php
+     getsiblings.php
+     insertprep.php
+     moveitem.php
+    }
+    xaruser=xaruser {
+     display.php
+     main.php
+    }
+    xaruserapi=xaruserapi {
+     addcurrentpageflags.php
+     arrayoverlay.php
+     browse_files.php
+     decode_shorturl.php
+     encode_shorturl.php
+     getaliases.php
+     getitemfields.php
+     getitemlinks.php
+     getitemtypes.php
+     getpage.php
+     getpagebypath.php
+     getpagedd.php
+     getpages.php
+     getpagestree.php
+     getstatuses.php
+     gettype.php
+     gettypeitemtype.php
+     gettypes.php
+     pageintrees.php
+     transform_text.php
+     transformhook.php
+    }
+   }
+   xmlrpcserver=xmlrpcserver {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     main.php
+     overview.php
+    }
+    xardocs=xardocs {
+    }
+    xarimages=xarimages {
+    }
+    xarincludes=xarincludes {
+     xartests=xartests {
+      testSuite.php
+     }
+    }
+    xartemplates=xartemplates {
+     admin-main.xd
+     user-main.xd
+     user-rsd.xd
+     xmlrpc-createresponse.xd
+     includes=includes {
+      xmlrpc-types.xd
+     }
+    }
+    xaruser=xaruser {
+     main.php
+     rsd.php
+    }
+    xaruserapi=xaruserapi {
+     call.php
+     callxmlrpc.php
+     createresponse.php
+     faultresponse.php
+     getdatatypes.php
+     initxmlrpcserver.php
+     successresponse.php
+    }
+   }
+   xmlrpcsystemapi=xmlrpcsystemapi {
+    xarinit.php
+    xarversion.php
+    xaradmin=xaradmin {
+     introspect.php
+     main.php
+     overview.php
+    }
+    xaradminapi=xaradminapi {
+     getmenulinks.php
+    }
+    xarimages=xarimages {
+    }
+    xartemplates=xartemplates {
+     admin-introspect.xd
+     admin-main.xd
+     xmlrpcsystemapi-methodsignature.xd
+    }
+    xaruserapi=xaruserapi {
+     getdmap.php
+     listmethods.php
+     methodhelp.php
+     methodsignature.php
+    }
+   }
+  }
+  no-upload=no-upload {
+  }
+  themes=themes {
+   AccuBimini=AccuBimini {
+    xartheme.php
+    blocks=blocks {
+     adblock.xt
+     aomenus.xt
+     default.xt
+     footer.xt
+     header.xt
+     homewelcome.xt
+     latestjournal.xt
+     newsitems.xt
+     remotefeeds.xt
+     rightcol.xt
+    }
+    graphics=graphics {
+     bg=bg {
+     }
+     dbx=dbx {
+     }
+     icons=icons {
+     }
+    }
+    includes=includes {
+     headtags.xt
+     pagehead.xt
+    }
+    modules=modules {
+     articles=articles {
+      admin-modify-blogs.xt
+      admin-new-blogs.xt
+      user-display-blogs.xt
+      user-display-journals.xt
+      user-display-news.xt
+      user-summary-blogs.xt
+      user-summary-journals.xt
+      user-summary-weblinks.xt
+      user-view-blogs.xt
+      user-view-journals.xt
+      user-view-weblinks.xt
+      blocks=blocks {
+       topitems-localfeeds.xt
+       topitems.xt
+      }
+      includes=includes {
+       publinks.xt
+      }
+     }
+     base=base {
+      blocks=blocks {
+       content-vbanner.xt
+       menu.xt
+       verticallistbycats.xt
+      }
+      properties=properties {
+       showinput-textarea.xt
+      }
+     }
+     bookreviews=bookreviews {
+      user-search.xt
+     }
+     categories=categories {
+      user-navigation-crumbs.xt
+      user-navigation-desc.xt
+      user-navigation-journalbase.xt
+      user-navigation-journalhead.xt
+      user-navigation-trails.xt
+      images=images {
+      }
+     }
+     headlines=headlines {
+      blocks=blocks {
+       rss.xt
+      }
+     }
+     julian=julian {
+      xarstyles=xarstyles {
+      }
+     }
+     registration=registration {
+      blocks=blocks {
+       logout.xt
+       rlogin.xt
+      }
+     }
+     roles=roles {
+      blocks=blocks {
+       online.xt
+      }
+     }
+     xarpages=xarpages {
+      page-accu_london.xt
+      page-accu_usa.xt
+      page-accudoc-home.xt
+      page-accudoc.xt
+      page-conference.xt
+      page-default.xt
+      page-editinfo.xt
+      page-members-mailarchives.xt
+      page-members.xt
+      page-newbooks.xt
+      includes=includes {
+       menu.xt
+      }
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+    scripts=scripts {
+    }
+    style=style {
+    }
+    yaml=yaml {
+     add-ons=add-ons {
+      microformats=microformats {
+       images=images {
+        xfn=xfn {
+        }
+       }
+      }
+      rtl-support=rtl-support {
+       core=core {
+       }
+       navigation=navigation {
+       }
+      }
+     }
+     core=core {
+     }
+     debug=debug {
+      images=images {
+      }
+     }
+     navigation=navigation {
+      images=images {
+       shiny_buttons=shiny_buttons {
+       }
+       sliding_door=sliding_door {
+        round=round {
+        }
+       }
+       vlist=vlist {
+        square=square {
+        }
+       }
+      }
+     }
+     patches=patches {
+     }
+     print=print {
+     }
+     screen=screen {
+      images=images {
+      }
+     }
+    }
+   }
+   Xaraya_Classic=Xaraya_Classic {
+    xartheme.php
+    blocks=blocks {
+     bottomnav.xt
+     center.xt
+     default.xt
+     header.xt
+     mainnavbubble.xt
+     right.xt
+     top.xt
+     topnav.xt
+    }
+    documentation=documentation {
+    }
+    images=images {
+     green=green {
+     }
+     highcontrast=highcontrast {
+     }
+     orange=orange {
+     }
+    }
+    includes=includes {
+     content_1col.xt
+     content_2col_cr.xt
+     content_2col_lc.xt
+     content_3col.xt
+     headtagcontent.xt
+     pageblockgroups.xt
+     pagefooter.xt
+     pageheader.xt
+     styleswitchercontrols.xt
+     styleswitchercsslinks.xt
+    }
+    modules=modules {
+     base=base {
+      about.xt
+      hint.xt
+      message-LOGIN_ERROR.xt
+      user-main-glimpse.xt
+      user-main.xt
+      images=images {
+       jquery=jquery {
+        plugins=plugins {
+         ui=ui {
+         }
+        }
+       }
+      }
+      xarstyles=xarstyles {
+       jquery=jquery {
+        plugins=plugins {
+         ui=ui {
+         }
+        }
+       }
+      }
+     }
+     categories=categories {
+      images=images {
+      }
+     }
+     example=example {
+      user-main.xt
+     }
+     installer=installer {
+      images=images {
+      }
+     }
+     roles=roles {
+      images=images {
+      }
+     }
+    }
+    pages=pages {
+     _admin.xt
+     dashboard.xt
+     default.xt
+     module.xt
+    }
+    scripts=scripts {
+    }
+    style=style {
+    }
+   }
+   atom=atom {
+    xartheme.php
+    modules=modules {
+     articles=articles {
+      user-summary-blog.xt
+      user-summary-docs.xt
+      user-summary-downloads.xt
+      user-summary-news.xt
+      user-summary.xt
+      user-view.xt
+     }
+     base=base {
+      pager-default.xt
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+   }
+   buddha=buddha {
+    xartheme.php
+    blocks=blocks {
+     default.xt
+     header.xt
+     right.xt
+    }
+    images=images {
+    }
+    modules=modules {
+     articles=articles {
+      user-display-docs.xt
+      user-display-downloads.xt
+      user-display-news.xt
+      user-display-wyome.xt
+      user-summary-docs.xt
+      user-summary-downloads.xt
+      user-summary-news.xt
+      user-summary-wyome.xt
+      user-view.xt
+      blocks=blocks {
+       featureditems.xt
+      }
+     }
+     roles=roles {
+      blocks=blocks {
+       online.xt
+      }
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+    style=style {
+    }
+   }
+   empty=empty {
+    xartheme.php
+    blocks=blocks {
+     default.xt
+     header.xt
+     right.xt
+    }
+    pages=pages {
+     default.xt
+    }
+    style=style {
+    }
+   }
+   installer=installer {
+    xartheme.php
+    images=images {
+    }
+    pages=pages {
+     default.xt
+    }
+    style=style {
+    }
+   }
+   print=print {
+    xartheme.php
+    modules=modules {
+     articles=articles {
+      user-display-docs.xt
+      user-display-faqs.xt
+      user-display-news.xt
+      user-display-pictures.xt
+      includes=includes {
+       user-display-common.xt
+      }
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+    style=style {
+    }
+   }
+   rss=rss {
+    xartheme.php
+    includes=includes {
+     rsssummary-common.xt
+    }
+    modules=modules {
+     articles=articles {
+      user-display-weblinks.xt
+      user-summary-blog.xt
+      user-summary-documentation.xt
+      user-summary-downloads.xt
+      user-summary-gallery.xt
+      user-summary-news.xt
+      user-summary-weblinks.xt
+      user-summary.xt
+      user-view.xt
+     }
+     base=base {
+      pager-default.xt
+     }
+     dynamicdata=dynamicdata {
+      user-display.xt
+      user-objectdisplay.xt
+      user-objectview.xt
+      user-view.xt
+     }
+     newsgroups=newsgroups {
+      user-group.xt
+     }
+     search=search {
+      user-main.xt
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+   }
+   xblue_pro=xblue_pro {
+    xartheme.php
+    blocks=blocks {
+     bottomnav.xt
+     center.xt
+     default.xt
+     header.xt
+     right.xt
+     topnav.xt
+    }
+    graphics_tpl=graphics_tpl {
+    }
+    images=images {
+    }
+    includes=includes {
+     abouttheme.xt
+     dosanddonts.xt
+     stylesinfo.xt
+    }
+    modules=modules {
+     base=base {
+      user-main.xt
+      xarstyles=xarstyles {
+      }
+     }
+     keywords=keywords {
+      user-main.xt
+     }
+     roles=roles {
+      blocks=blocks {
+       login.xt
+      }
+     }
+    }
+    pages=pages {
+     default.xt
+    }
+    style=style {
+    }
+   }
+  }
+  var=var {
+   config.system-remote.php
+   config.system.php
+   example.key.php
+   locales=locales {
+    da_DK.utf-8=da_DK.utf-8 {
+     xml=xml {
+      core=core {
+      }
+     }
+    }
+    de_DE.utf-8=de_DE.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    en_GB.utf-8=en_GB.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      modules=modules {
+       adminpanels=adminpanels {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+       }
+       articles=articles {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        schedulerapi=schedulerapi {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       authsystem=authsystem {
+        userapi=userapi {
+        }
+       }
+       autolinks=autolinks {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        userapi=userapi {
+        }
+       }
+       base=base {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        javascriptapi=javascriptapi {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+        versionsapi=versionsapi {
+        }
+       }
+       blocks=blocks {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+         includes=includes {
+         }
+        }
+       }
+       bloggerapi=bloggerapi {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        userapi=userapi {
+        }
+       }
+       categories=categories {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+         includes=includes {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+        visualapi=visualapi {
+        }
+       }
+       comments=comments {
+        adminapi=adminapi {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+         includes=includes {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       dyn_example=dyn_example {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       dynamicdata=dynamicdata {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+        util=util {
+        }
+        utilapi=utilapi {
+        }
+       }
+       example=example {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       hitcount=hitcount {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+       }
+       images=images {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       installer=installer {
+        templates=templates {
+        }
+       }
+       keywords=keywords {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       mail=mail {
+        adminapi=adminapi {
+        }
+        schedulerapi=schedulerapi {
+        }
+        templates=templates {
+        }
+       }
+       mime=mime {
+        userapi=userapi {
+        }
+       }
+       modules=modules {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+         includes=includes {
+         }
+        }
+       }
+       newsgroups=newsgroups {
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+       }
+       opentracker=opentracker {
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       polls=polls {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       privileges=privileges {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       ratings=ratings {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       recommend=recommend {
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        userapi=userapi {
+        }
+       }
+       referer=referer {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        userapi=userapi {
+        }
+       }
+       roles=roles {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        blocks=blocks {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       search=search {
+        templates=templates {
+        }
+        user=user {
+        }
+       }
+       sitetools=sitetools {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       sniffer=sniffer {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       stats=stats {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+         includes=includes {
+         }
+        }
+        userapi=userapi {
+        }
+       }
+       themes=themes {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+         blocks=blocks {
+         }
+        }
+        user=user {
+        }
+       }
+       translations=translations {
+        adminapi=adminapi {
+        }
+        templates=templates {
+         includes=includes {
+         }
+        }
+       }
+       uploads=uploads {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+         includes=includes {
+         }
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       userpoints=userpoints {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       xarbb=xarbb {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+        user=user {
+        }
+        userapi=userapi {
+        }
+       }
+       xlink=xlink {
+        admin=admin {
+        }
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       xmlrpcserver=xmlrpcserver {
+        templates=templates {
+        }
+        userapi=userapi {
+        }
+       }
+       xmlrpcsystemapi=xmlrpcsystemapi {
+        adminapi=adminapi {
+        }
+        templates=templates {
+        }
+       }
+       xmlrpcvalidatorapi=xmlrpcvalidatorapi {
+        templates=templates {
+        }
+       }
+      }
+      themes=themes {
+       Xaraya_Classic=Xaraya_Classic {
+        pages=pages {
+        }
+       }
+       installer=installer {
+        pages=pages {
+        }
+       }
+       print=print {
+        modules=modules {
+         articles=articles {
+         }
+        }
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    en_US.iso-8859-1=en_US.iso-8859-1 {
+    }
+    en_US.utf-8=en_US.utf-8 {
+    }
+    fr_FR.utf-8=fr_FR.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    hu_HU.utf-8=hu_HU.utf-8 {
+     xml=xml {
+      core=core {
+      }
+     }
+    }
+    it_IT.utf-8=it_IT.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    ja_JP.utf-8=ja_JP.utf-8 {
+     xml=xml {
+      core=core {
+      }
+     }
+    }
+    nl_NL.utf-8=nl_NL.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    ph_PH.utf-8=ph_PH.utf-8 {
+     xml=xml {
+      core=core {
+      }
+     }
+    }
+    pt_BR.utf-8=pt_BR.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    ru_RU.utf-8=ru_RU.utf-8 {
+     xml=xml {
+      core=core {
+      }
+     }
+    }
+    sv_SE.utf-8=sv_SE.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+    zh_CN.utf-8=zh_CN.utf-8 {
+     xml=xml {
+      core=core {
+      }
+      themes=themes {
+       installer=installer {
+        pages=pages {
+        }
+       }
+      }
+     }
+    }
+   }
+   logs=logs {
+   }
+   messaging=messaging {
+    mail=mail {
+     changehook-message.xt
+     changehook-subject.xt
+     createhook-message.xt
+     createhook-subject.xt
+     deletehook-message.xt
+     deletehook-subject.xt
+     includes=includes {
+      message-vars.xt
+     }
+    }
+    roles=roles {
+     confirmation-message.xt
+     confirmation-subject.xt
+     deactivation-message.xt
+     deactivation-subject.xt
+     password-message.xt
+     password-subject.xt
+     pending-message.xt
+     pending-subject.xt
+     reminder-message.xt
+     reminder-subject.xt
+     validation-message.xt
+     validation-subject.xt
+     welcome-message.xt
+     welcome-subject.xt
+     includes=includes {
+      message-vars.xt
+     }
+    }
+   }
+   uploads=uploads {
+    journals=journals {
+     resources=resources {
+     }
+    }
+   }
+  }
+  xaradodb=xaradodb {
+   adodb-active-record.inc.php
+   adodb-csvlib.inc.php
+   adodb-datadict.inc.php
+   adodb-error.inc.php
+   adodb-errorhandler.inc.php
+   adodb-errorpear.inc.php
+   adodb-exceptions.inc.php
+   adodb-iterator.inc.php
+   adodb-lib.inc.php
+   adodb-memcache.lib.inc.php
+   adodb-pager.inc.php
+   adodb-pear.inc.php
+   adodb-perf.inc.php
+   adodb-php4.inc.php
+   adodb-time.inc.php
+   adodb-xmlschema.inc.php
+   adodb-xmlschema03.inc.php
+   adodb.inc.php
+   pivottable.inc.php
+   rsfilter.inc.php
+   toexport.inc.php
+   tohtml.inc.php
+   contrib=contrib {
+    toxmlrpc.inc.php
+   }
+   cute_icons_for_site=cute_icons_for_site {
+   }
+   datadict=datadict {
+    datadict-access.inc.php
+    datadict-db2.inc.php
+    datadict-firebird.inc.php
+    datadict-generic.inc.php
+    datadict-ibase.inc.php
+    datadict-informix.inc.php
+    datadict-mssql.inc.php
+    datadict-mssqlnative.inc.php
+    datadict-mysql.inc.php
+    datadict-oci8.inc.php
+    datadict-postgres.inc.php
+    datadict-sapdb.inc.php
+    datadict-sqlite.inc.php
+    datadict-sybase.inc.php
+   }
+   docs=docs {
+   }
+   drivers=drivers {
+    adodb-access.inc.php
+    adodb-ado.inc.php
+    adodb-ado5.inc.php
+    adodb-ado_access.inc.php
+    adodb-ado_mssql.inc.php
+    adodb-borland_ibase.inc.php
+    adodb-csv.inc.php
+    adodb-db2.inc.php
+    adodb-fbsql.inc.php
+    adodb-firebird.inc.php
+    adodb-ibase.inc.php
+    adodb-informix.inc.php
+    adodb-informix72.inc.php
+    adodb-ldap.inc.php
+    adodb-mssql.inc.php
+    adodb-mssql_n.inc.php
+    adodb-mssqlnative.inc.php
+    adodb-mssqlpo.inc.php
+    adodb-mysql.inc.php
+    adodb-mysqli.inc.php
+    adodb-mysqlt.inc.php
+    adodb-netezza.inc.php
+    adodb-oci8.inc.php
+    adodb-oci805.inc.php
+    adodb-oci8po.inc.php
+    adodb-odbc.inc.php
+    adodb-odbc_db2.inc.php
+    adodb-odbc_mssql.inc.php
+    adodb-odbc_oracle.inc.php
+    adodb-odbtp.inc.php
+    adodb-odbtp_unicode.inc.php
+    adodb-oracle.inc.php
+    adodb-pdo.inc.php
+    adodb-pdo_mssql.inc.php
+    adodb-pdo_mysql.inc.php
+    adodb-pdo_oci.inc.php
+    adodb-pdo_pgsql.inc.php
+    adodb-postgres.inc.php
+    adodb-postgres64.inc.php
+    adodb-postgres7.inc.php
+    adodb-postgres8.inc.php
+    adodb-proxy.inc.php
+    adodb-sapdb.inc.php
+    adodb-sqlanywhere.inc.php
+    adodb-sqlite.inc.php
+    adodb-sqlitepo.inc.php
+    adodb-sybase.inc.php
+    adodb-sybase_ase.inc.php
+    adodb-vfp.inc.php
+    adodb-xarmssql.inc.php
+    adodb-xarmysql.inc.php
+    adodb-xaroci8.inc.php
+    adodb-xarpostgres.inc.php
+    adodb-xarpostgres64.inc.php
+    adodb-xarpostgres7.inc.php
+    adodb-xarpostgres8.inc.php
+    adodb-xarsqlite.inc.php
+   }
+   lang=lang {
+    adodb-ar.inc.php
+    adodb-bg.inc.php
+    adodb-bgutf8.inc.php
+    adodb-ca.inc.php
+    adodb-cn.inc.php
+    adodb-cz.inc.php
+    adodb-da.inc.php
+    adodb-de.inc.php
+    adodb-en.inc.php
+    adodb-es.inc.php
+    adodb-esperanto.inc.php
+    adodb-fa.inc.php
+    adodb-fr.inc.php
+    adodb-hu.inc.php
+    adodb-it.inc.php
+    adodb-nl.inc.php
+    adodb-pl.inc.php
+    adodb-pt-br.inc.php
+    adodb-ro.inc.php
+    adodb-ru1251.inc.php
+    adodb-sv.inc.php
+    adodb-uk1251.inc.php
+    adodb_th.inc.php
+   }
+   pear=pear {
+    Auth=Auth {
+     Container=Container {
+      ADOdb.php
+     }
+    }
+   }
+   perf=perf {
+    perf-db2.inc.php
+    perf-informix.inc.php
+    perf-mssql.inc.php
+    perf-mssqlnative.inc.php
+    perf-mysql.inc.php
+    perf-oci8.inc.php
+    perf-postgres.inc.php
+   }
+   session=session {
+    adodb-compress-bzip2.php
+    adodb-compress-gzip.php
+    adodb-cryptsession.php
+    adodb-cryptsession2.php
+    adodb-encrypt-mcrypt.php
+    adodb-encrypt-md5.php
+    adodb-encrypt-secret.php
+    adodb-encrypt-sha1.php
+    adodb-session-clob.php
+    adodb-session-clob2.php
+    adodb-session.php
+    adodb-session2.php
+    crypt.inc.php
+    old=old {
+     adodb-cryptsession.php
+     adodb-session-clob.php
+     adodb-session.php
+     crypt.inc.php
+    }
+   }
+   tests=tests {
+    benchmark.php
+    cf~testsessions.php
+    client.php
+    pdo.php
+    test-active-record.php
+    test-active-recs2.php
+    test-datadict.php
+    test-perf.php
+    test-pgblob.php
+    test-php5.php
+    test-xmlschema.php
+    test.php
+    test2.php
+    test3.php
+    test4.php
+    test5.php
+    test_rs_array.php
+    testcache.php
+    testdatabases.inc.php
+    testgenid.php
+    testmssql.php
+    testoci8.php
+    testoci8cursor.php
+    testpaging.php
+    testpear.php
+    testsessions.php
+    time.php
+    tmssql.php
+   }
+   xartests=xartests {
+   }
+   xsl=xsl {
+   }
+  }
+ }
+ var=var CD=. flags=lr {
+  config.system-remote.php
+  config.system.php
+  example.key.php
+ }
+}

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/wwwroot/angular-phonecat/app/partials'
+let g:netrw_dirhist_2='/home/wwwroot/angular-phonecat/app'
+let g:netrw_dirhist_3='/home/wwwroot/angular-phonecat/app/js'
+let g:netrw_dirhist_4='/home/wwwroot/accu.org/themes/AccuBimini/modules/xarpages'
+let g:netrw_dirhist_5='/home/jalal/Projects/stream-adventure'
