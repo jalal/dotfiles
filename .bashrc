@@ -53,11 +53,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+# if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
 unset color_prompt force_color_prompt
 
 PS1="\[\033[1;34m\][\!][\w]\[\033[0m\]\n\u@\h \$ "
@@ -78,20 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-# alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 CHROME_BIN=/usr/bin/chromium-browser
 export CHROME_BIN
@@ -137,6 +124,11 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+# . $HOME/.shellrc.load
+export ANDROID_HOME=/home/jalal/apps/android-sdk-linux/
 
-
-. $HOME/.shellrc.load
+###-tns-completion-start-###
+if [ -f /home/jalal/.tnsrc ]; then 
+    source /home/jalal/.tnsrc 
+fi
+###-tns-completion-end-###
