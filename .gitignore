@@ -2,6 +2,7 @@
 # and so will be ignoring almost all files.
 [A-z]*
 .[A-z]*
+.bash_history
 !.byobu*
 !.gitignore*
 !.gitconfig
