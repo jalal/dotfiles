@@ -1,0 +1,30 @@
+# this gitignore file is for the storage of my dotfile setup
+# and so will be ignoring almost all files.
+[A-z]*
+.[A-z]*
+!.byobu*
+!.gitignore*
+!.gitconfig
+!.netrc
+!.hgignorerc
+!.bash_aliases
+!.bash*
+!.filezilla
+!.sdirs
+!.tmux.conf
+!.vimrc
+!.vim
+!.zshrc
+!.xinputrc
+!.tnsrc
+!.sshlist
+!.screenrc
+!.npmrc
+!.netrc
+!.mongorc.js
+!.jshintrc
+!.pearrc
+!.profile
+!.hg*
+!.gvimrc
+
