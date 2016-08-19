@@ -108,6 +108,10 @@ fi
 export PATH=$HOME/.node/bin:$PATH
 export NODE_PATH=$NODE_PATH:/home/jalal/.node/lib/node_modules
 
+export ANDROID_HOME=/home/jalal/apps/android-sdk-linux/
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+export PATH=$PATH:/opt/genymobile/genymotion
 
 # add this configuration to ~/.bashrc
 export HH_CONFIG=hicolor         # get more colors
@@ -123,8 +127,21 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+## the following set of commands are from
+## http://mrzool.cc/writing/sensible-bash/
+#
+# setup readline with some defaults:
+bind "set completion-ignore-case on"
+bind "set completion-map-case on"
+bind "set show-all-if-ambiguous on"
+# and faster directory navigation
+shopt -s autocd
+shopt -s dirspell
+shopt -s cdspell
+
+## end mrzool.cc
+
 # . $HOME/.shellrc.load
-export ANDROID_HOME=/home/jalal/apps/android-sdk-linux/
 
 ###-tns-completion-start-###
 if [ -f /home/jalal/.tnsrc ]; then 

@@ -18,5 +18,7 @@ alias la='ls -A'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias psa='ps --headers axf -o pid,ppid,pri,state,user:15,group:15,nlwp,%cpu,%mem,rss,vsz,maj_flt,time,start,comm'
+
 
 

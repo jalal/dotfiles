@@ -11,6 +11,18 @@ convert =
 # hggit = /usr/share/pyshared/hgext/git
 rebase =
 graphlog =
+strip =
+shelve =
+pager =
+# fsmonitor =
+histedit =
+
+[pager]
+pager = LESS='FRX' less
+
+[alias]
+llog = log --limit 10
+xlog = log --limit 30 --style compact -G
 
 [tortoisehg]
 editor = subl

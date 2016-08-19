@@ -1,6 +1,7 @@
 gnomedia@leon.gnomedia.net
 gnomedia@tigger.gnomedia.net
 gnomedia@harvey.gnomedia.net
+theadmin@gnomedia.eu
 -p 2222 gnomedia@gnomedia.com
 -p 2222 theadmin@81.94.205.27
 -p 2222 theadmin@206.225.95.173
