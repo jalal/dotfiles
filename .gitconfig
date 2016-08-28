@@ -9,3 +9,13 @@
 	helper = cache --timeout=3600
 [push]
 	default = simple
+[alias]
+	# for more aliases see:
+	# http://www.brendanforster.com/notes/git-alias.html
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	df = diff
+	lp = log -p
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
