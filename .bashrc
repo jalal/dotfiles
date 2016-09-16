@@ -83,7 +83,8 @@ CHROME_BIN=/usr/bin/chromium-browser
 export CHROME_BIN
 
 # this stops grep from scanning .svn directories
-export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
+# export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
+alias grep='grep --exclude=\*/\.svn --exclude-dir=\.hg'
 
 # a bash shell bookmark script
 if [ -f ~/.local/bin/bashmarks.sh ]; then
