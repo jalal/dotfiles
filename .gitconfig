@@ -4,6 +4,7 @@
 [core]
 	autocrlf = input
 	safecrlf = warn
+	ignorecase = false
 	excludesfile = /home/jalal/.gitignorerc
 [credential]
 	helper = cache --timeout=3600
@@ -18,6 +19,44 @@
 	br = branch
 	df = diff
 	lp = log -p
+	outgo = diff master origin/master
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ls = log --abbrev-commit --no-merges --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y'
+	ll = log --no-merges --pretty='\n\n%C(bold yellow)[%cn] %C(bold red)(%cr) %C(bold green)%s' --decorate --numstat
+	search = log --no-merges -i -E --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y' --grep
+
+[grep]
+  lineNumber = true
+  extendRegexp = true
+
 [color]
-	ui = true
+  ui = true
+  interactive = auto
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = green bold
+  local = green
+  remote = red bold
+
+[color "diff"]
+  meta = yellow bold ul
+  frag = cyan bold ul
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+
+[filter "lfs"]
+  smudge = git-lfs smudge %f
+  required = true
+  clean = git-lfs clean %f
+
+[push]
+  default = simple
+
