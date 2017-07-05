@@ -3,7 +3,10 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -28,13 +31,13 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -53,9 +56,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-unset color_prompt force_color_prompt
+# old install had 
+# PS1="\[\033[1;34m\][\!][\w]\[\033[0m\]\n\u@\h \$ "
 
-PS1="\[\033[1;34m\][\!][\w]\[\033[0m\]\n\u@\h \$ "
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -65,11 +74,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-export PS1
-
-#if [ -x $HOME/apps/liquidprompt/liquidprompt ]; then
-#    source $HOME/apps/liquidprompt/liquidprompt
-#fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -77,19 +81,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
-CHROME_BIN=/usr/bin/chromium-browser
-export CHROME_BIN
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# this stops grep from scanning .svn directories
-# export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
-alias grep='grep --exclude=\*/\.svn --exclude-dir=\.hg'
-
-# a bash shell bookmark script
-if [ -f ~/.local/bin/bashmarks.sh ]; then
-    source ~/.local/bin/bashmarks.sh
-fi
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -103,9 +106,33 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
 fi
+
+#############################################################
+## Below are my additions
+
+if command -v most > /dev/null 2>&1; then
+        export PAGER="most"
+fi
+
+# this stops grep from scanning VCS directories
+# export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
+alias grep='grep --exclude=\*/\.svn --exclude-dir=\.hg --exclude-dir=\.git'
+
+# a bash shell bookmark script
+if [ -f ~/.local/bin/bashmarks.sh ]; then
+    source ~/.local/bin/bashmarks.sh
+fi
+
+CHROME_BIN=/usr/bin/chromium-browser
+export CHROME_BIN
+
 export PATH=$HOME/.node/bin:$PATH
 export NODE_PATH=$NODE_PATH:/home/jalal/.node/lib/node_modules
 
@@ -113,6 +140,9 @@ export ANDROID_HOME=/home/jalal/apps/android-sdk-linux/
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:/opt/genymobile/genymotion
+export PATH=$PATH:/usr/local/go/bin
+
+export GOPATH=$HOME/go
 
 # add this configuration to ~/.bashrc
 export HH_CONFIG=hicolor         # get more colors
@@ -149,3 +179,4 @@ if [ -f /home/jalal/.tnsrc ]; then
     source /home/jalal/.tnsrc 
 fi
 ###-tns-completion-end-###
+

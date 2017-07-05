@@ -20,5 +20,7 @@ alias la='ls -A'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias psa='ps --headers axf -o pid,ppid,pri,state,user:15,group:15,nlwp,%cpu,%mem,rss,vsz,maj_flt,time,start,comm'
 
-
+# Some disk usage commands
+alias big-dir='du -ah . | sort -rh | head -20'
+alias big-files='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
