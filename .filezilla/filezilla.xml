@@ -47,7 +47,7 @@
 		<Setting name="Auto Ascii dotfiles" type="number">1</Setting>
 		<Setting name="Theme" type="string">tango/</Setting>
 		<Setting name="Language Code" type="string" />
-		<Setting name="Last Server Path" type="string">1 0 4 home 8 kinderfr 11 public_html 17 tagespflegeperson</Setting>
+		<Setting name="Last Server Path" type="string">1 0 4 home 8 wildques 11 public_html 10 wp-content</Setting>
 		<Setting name="Concurrent download limit" type="number">0</Setting>
 		<Setting name="Concurrent upload limit" type="number">0</Setting>
 		<Setting name="Update Check" type="number">1</Setting>
@@ -386,7 +386,7 @@ release 3.16.1 http://downloads.sourceforge.net/filezilla/FileZilla_3.16.1_x86_6
 		<Setting name="Show Tree Remote" type="number">0</Setting>
 		<Setting name="File Pane Layout" type="number">3</Setting>
 		<Setting name="File Pane Swap" type="number">0</Setting>
-		<Setting name="Last local directory" type="string">/home/wwwroot/kinder-freiburg.de/tagespflegeperson/</Setting>
+		<Setting name="Last local directory" type="string">/home/wwwroot/wildquest.com/site/wp-content/</Setting>
 		<Setting name="Filelist directory sort" type="number">0</Setting>
 		<Setting name="Queue successful autoclear" type="number">0</Setting>
 		<Setting name="Queue column widths" type="string">204 85 634 80 60 100</Setting>
@@ -412,7 +412,7 @@ log /usr/bin/gedit</Setting>
 		<Setting name="Site Manager position" type="string">0 597 233 727 604 </Setting>
 		<Setting name="Theme icon size" type="string">16x16</Setting>
 		<Setting name="Timestamp in message log" type="number">0</Setting>
-		<Setting name="Sitemanager last selected" type="string">0/Kinder-freiburg.de</Setting>
+		<Setting name="Sitemanager last selected" type="string">0/Wildquest</Setting>
 		<Setting name="Local filelist shown columns" type="string">1111</Setting>
 		<Setting name="Remote filelist shown columns" type="string">111111</Setting>
 		<Setting name="Local filelist column order" type="string">0,1,2,3</Setting>
@@ -422,7 +422,7 @@ log /usr/bin/gedit</Setting>
 		<Setting name="Size decimal places" type="number">0</Setting>
 		<Setting name="Show quickconnect bar" type="number">1</Setting>
 		<Setting name="Messagelog position" type="number">1</Setting>
-		<Setting name="Last connected site" type="string">0/Kinder-freiburg.de</Setting>
+		<Setting name="Last connected site" type="string">0/Wildquest</Setting>
 		<Setting name="File doubleclock action" type="number">1</Setting>
 		<Setting name="Dir doubleclock action" type="number">0</Setting>
 		<Setting name="Minimize to tray" type="number">0</Setting>
@@ -436,19 +436,19 @@ log /usr/bin/gedit</Setting>
 		<Setting name="Prevent idle sleep" type="number">1</Setting>
 		<Setting name="Filteredit window size" type="string">0 588 291 750 500 </Setting>
 		<LastServer>
-			<Host>kinder-freiburg.de</Host>
+			<Host>wildquest.com</Host>
 			<Port>22</Port>
 			<Protocol>1</Protocol>
 			<Type>0</Type>
-			<User>kinderfr</User>
-			<Pass encoding="base64">YW5vbkBsb2NhbGhvc3Q=</Pass>
+			<User>wildques</User>
+			<Pass encoding="base64">dzJvYXJpWlZTaEdn</Pass>
 			<Logontype>1</Logontype>
 			<TimezoneOffset>0</TimezoneOffset>
 			<PasvMode>MODE_DEFAULT</PasvMode>
 			<MaximumMultipleConnections>0</MaximumMultipleConnections>
 			<EncodingType>Auto</EncodingType>
 			<BypassProxy>0</BypassProxy>
-			<Name>Kinder-freiburg.de</Name>
+			<Name>Wildquest</Name>
 		</LastServer>
 		<Setting name="Already connected choice" type="number">1</Setting>
 		<Setting name="Edit status dialog size">0 447 318 1230 263 </Setting>
