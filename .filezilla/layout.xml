@@ -14,8 +14,8 @@
 			<xrc file="inputdialog.xrc" date="1456395528" />
 		</Resources>
 		<Language id="default" date="">
-			<Font font="Ubuntu 11" width="871" height="17" />
-			<Dialog name="Site Manager" width="665" />
+			<Font font="Cantarell 11" width="825" height="20" />
+			<Dialog name="Site Manager" width="727" />
 		</Language>
 	</Layout>
 </FileZilla3>

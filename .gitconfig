@@ -6,6 +6,7 @@
 	safecrlf = warn
 	ignorecase = false
 	excludesfile = /home/jalal/.gitignorerc
+	editor = vim
 [credential]
 	helper = cache --timeout=3600
 [push]
@@ -24,6 +25,8 @@
 	ls = log --abbrev-commit --no-merges --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y'
 	ll = log --no-merges --pretty='\n\n%C(bold yellow)[%cn] %C(bold red)(%cr) %C(bold green)%s' --decorate --numstat
 	search = log --no-merges -i -E --pretty='%h (%ad) - [%an] %s %d' --date=format:'%b %d %Y' --grep
+	unstage = reset HEAD --
+	last = log -1 HEAD
 
 [grep]
   lineNumber = true

@@ -1,136 +1,158 @@
-" uber vim config
+set nocompatible
 
-" load plugins from vundle
-source ~/.vim/plugins.vim
+filetype off
 
-set nocompatible		" be iMproved, required
-set autoread			" detect file changes
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
+
+" ----- Making Vim look good ------------------------------------------
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" ----- Vim as a programmer's text editor -----------------------------
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+Plugin 'vim-syntastic/syntastic'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" ----- Working with Git ----------------------------------------------
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
+" ----- Other text editing features -----------------------------------
+Plugin 'Raimondi/delimitMate'
+
+Plugin 'christoomey/vim-tmux-navigator'
+
+" ----- Syntax plugins ------------------------------------------------
+" Plugin 'jez/vim-c0'
+" Plugin 'jez/vim-ispc'
+" Plugin 'kchmck/vim-coffee-script'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'stanangeloff/php.vim'
+Plugin 'elzr/vim-json'
+Plugin 'leafgarland/typescript-vim'
+" Plugin 'frigoeu/psc-ide-vim'
+Plugin 'raichoo/purescript-vim'
+
+" ---- Extras/Advanced plugins ----------------------------------------
+" Highlight and strip trailing whitespace
+Plugin 'ntpeters/vim-better-whitespace'
+" Easily surround chunks of text
+Plugin 'tpope/vim-surround'
+" Align CSV files at commas, align Markdown tables, and more
+Plugin 'godlygeek/tabular'
+" Automaticall insert the closing HTML tag
+Plugin 'HTML-AutoCloseTag'
+" Make tmux look like vim-airline (read README for extra instructions)
+"Plugin 'edkolev/tmuxline.vim'
+" All the other syntax plugins I use
+"Plugin 'ekalinin/Dockerfile.vim'
+"Plugin 'digitaltoad/vim-jade'
+"Plugin 'tpope/vim-liquid'
+Plugin 'cakebaker/scss-syntax.vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
+"--- general settings ---
 set backspace=indent,eol,start
-
-set history=2000
-set textwidth=120
-
-" Tab and space handling
-set autoindent
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set cindent
-set smartindent
-set cinkeys=0{,0},:,0#,!^F
-
-set clipboard=unnamed		" use system clipboard
-
-" Much of the following comes from Nick Nisi:
-" https://github.com/nicknisi/dotfiles/blob/master/vim/vimrc.symlink
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" => User Interface
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set so=7 " set 7 lines to the cursors - when moving vertical
-set wildmenu " enhanced command line completion
-set hidden " current buffer can be put into background
-set showcmd " show incomplete commands
-set noshowmode " don't show which mode disabled for PowerLine
-set wildmode=list:longest " complete files like a shell
-set scrolloff=3 " lines of text around cursor
-set shell=$SHELL
-set cmdheight=2 " command bar height
-set shortmess=a
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz
-
-set title " set terminal title
-
-" Searching
-set ignorecase " case insensitive searching
-set smartcase " case-sensitive if expresson contains a capital letter
+set ruler
+set number
+set showcmd
+set incsearch
 set hlsearch
-set incsearch " set incremental search, like modern browsers
-set nolazyredraw " don't redraw while executing macros
 
-set magic " Set magic on, for regex
-
-set showmatch " show matching braces
-set mat=2 " how many tenths of a second to blink
-
-" error bells
-set noerrorbells
-set visualbell
-set t_vb=
-set tm=500
-
-" switch syntax highlighting on
 syntax on
 
-set encoding=utf8
-" let base16colorspace=256  " Access colors present in 256 colorspace"
-" set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-" execute "set background=".$BACKGROUND
-" execute "colorscheme ".$THEME
+set mouse=a
 
-" set number " show line numbers
-set relativenumber " show relative line numbers
-set number " show the current line number"
+" We need this for plugins like Syntastic and vim-gitgutter which put symbols
+" in the sign column.
+hi clear SignColumn
 
-set wrap "turn on line wrapping
-set wrapmargin=8 " wrap lines when coming within n characters from side
-set linebreak " set soft wrapping
-set showbreak=… " show ellipsis at breaking
+" ----- Plugin-Specific Settings --------------------------------------
 
-set autoindent " automatically set indent of new line
-set smartindent
+" ----- altercation/vim-colors-solarized settings -----
+" Toggle this to "light" for light colorscheme
+set background=light
 
-"set nobackup
-"set nowritebackup
-"set noswapfile
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+" Uncomment the next line if your terminal is not configured for solarized
+let g:solarized_termcolors=256
 
-" => StatusLine
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set laststatus=2 " show the satus line all the time
-
-" mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" wipeout buffer
-nmap <silent> <leader>b :bw<cr>
-
-" disable ex mode
-noremap Q <NOP>
-
-" set paste toggle
-set pastetoggle=<F6>
-" and toggle paste mode
-map <leader>v :set paste!<cr>
-
-"" Plugin specific keymappings/settings
-""""""""""""""""""""""""""""""""""""""""""""
-" close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=1
-" show hidden files in NERDTree
-let NERDTreeShowHidden=2
-" remove some files by extension
-let NERDTreeIgnore = ['\.js.map$']
-" Toggle NERDTree
-nmap <silent> <leader>k :NERDTreeToggle<cr>
-" expand to the path of the file in the current buffer
-nmap <silent> <leader>y :NERDTreeFind<cr>
-
-" map fuzzyfinder (CtrlP) plugin
-" nmap <silent> <leader>t :CtrlP<cr>
- nmap <silent> <leader>r :CtrlPBuffer<cr>
-let g:ctrlp_map='<leader>t'
-let g:ctrlp_dotfiles=2
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
-
-
-" base16 color schemes
-" let base16colorspace=256  " Access colors present in 256 colorspace
-set background=dark
+" Set the colorscheme
 colorscheme solarized
+
+" --- gruvbox settings ---
+"let g:gruvbox_italic=1
+"colorscheme gruvbox
+
+" --- vim-javascript settings ---
+" Enables syntax highlighting for JSDocs.
+let g:javascript_plugin_jsdoc = 1
+" Enables some additional syntax highlighting for NGDocs. Requires JSDoc
+" plugin to be enabled as well.
+let g:javascript_plugin_ngdoc = 1
+" Enables syntax highlighting for Flow.
+let g:javascript_plugin_flow = 1
+
+" ----- bling/vim-airline settings -----
+" Always show statusbar
+set laststatus=2
+
+" Fancy arrow symbols, requires a patched font
+" To install a patched font, run over to
+"     https://github.com/abertsch/Menlo-for-Powerline
+" download all the .ttf files, double-click on them and click "Install"
+" Finally, uncomment the next line
+let g:airline_powerline_fonts = 1
+
+" Show PASTE if in paste mode
+let g:airline_detect_paste=1
+
+" Show airline for tabs too
+let g:airline#extensions#tabline#enabled = 1
+
+" Use the solarized theme for the Airline status bar
+let g:airline_theme='solarized'
+
+" ----- jistr/vim-nerdtree-tabs -----
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 0
+ 
+" ----- scrooloose/syntastic settings -----
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+augroup mySyntastic
+  au!
+  au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+" ----- airblade/vim-gitgutter settings -----
+" In vim-airline, only display "hunks" if the diff is non-zero
+let g:airline#extensions#hunks#non_zero_only = 1
+
+" ----- Raimondi/delimitMate settings -----
+let delimitMate_expand_cr = 1
+augroup mydelimitMate
+  au!
+  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+  au FileType tex let b:delimitMate_quotes = ""
+  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
+augroup END
+
+
+
 

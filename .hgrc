@@ -32,3 +32,4 @@ postpull = rebase
 monitorrepo = always
 ui.language = en_GB
 authorcolor = True
+# %include ~/apps/tortoisehg/contrib/mergetools.rc
