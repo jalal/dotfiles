@@ -1,10 +1,6 @@
 alias dspace='ls -NQ | xargs du -s | sort -k 1 -g'
 alias less8='LESSCHARSET=utf-8 less'
 alias ducks='du -cks * | sort -rn | head -11'
-alias dir='ls -al'
-alias ll='ls -alF'
-alias la='ls -A'
-# alias l='ls -CF'
 alias tma='tmux attach'
 alias cursor-reset="echo -ne '\e]12;white\a'"
 
@@ -13,7 +9,13 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
-# alias l='ls -CF'
+alias lt='ls -ratl'
+alias dir='ls -al'
+
+# Copy file into clipboard
+alias cs='xclip -selection clipboard'
+# and paste it if needed
+alias vs='xclip -o -selection clipboard'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
