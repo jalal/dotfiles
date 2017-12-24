@@ -6,7 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
+" To install plugins, add below and then run:
+" $ vim +PluginInstall +qall
+"
 " ----- Making Vim look good ------------------------------------------
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
@@ -17,8 +19,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
-
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-syntastic/syntastic'
 
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -40,10 +43,13 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'stanangeloff/php.vim'
 Plugin 'elzr/vim-json'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 " Plugin 'frigoeu/psc-ide-vim'
 Plugin 'raichoo/purescript-vim'
 
 " ---- Extras/Advanced plugins ----------------------------------------
+" Buffer explorer
+Plugin 'jlanzarotta/bufexplorer'
 " Highlight and strip trailing whitespace
 Plugin 'ntpeters/vim-better-whitespace'
 " Easily surround chunks of text
@@ -74,13 +80,30 @@ set hlsearch
 
 syntax on
 
+"The rest deal with whitespace handling and
+"mainly make sure hardtabs are never entered
+"as their interpretation is too non standard in my experience
+set softtabstop=4
+" Note if you don't set expandtab, vi will automatically merge
+" runs of more than tabstop spaces into hardtabs. Clever but
+" not what I usually want.
+set expandtab
+set shiftwidth=4
+set shiftround
+set nojoinspaces
+ 
 set mouse=a
+let mapleader = "\\"
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
 hi clear SignColumn
 
 " ----- Plugin-Specific Settings --------------------------------------
+
+" ~~~~~ editorconfig settings ~~~~~
+"let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme

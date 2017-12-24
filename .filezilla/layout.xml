@@ -16,6 +16,7 @@
 		<Language id="default" date="">
 			<Font font="Cantarell 11" width="825" height="20" />
 			<Dialog name="Site Manager" width="727" />
+			<Dialog name="Settings" width="653" />
 		</Language>
 	</Layout>
 </FileZilla3>
