@@ -10,8 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 " $ vim +PluginInstall +qall
 "
 " ----- Making Vim look good ------------------------------------------
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 
 Plugin 'vim-airline/vim-airline'
@@ -91,7 +91,7 @@ set expandtab
 set shiftwidth=4
 set shiftround
 set nojoinspaces
- 
+
 set mouse=a
 let mapleader = "\\"
 
@@ -107,17 +107,17 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
-set background=light
+set background=dark
 
 " Uncomment the next line if your terminal is not configured for solarized
 let g:solarized_termcolors=256
 
 " Set the colorscheme
-colorscheme solarized
+" colorscheme solarized
 
 " --- gruvbox settings ---
-"let g:gruvbox_italic=1
-"colorscheme gruvbox
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " --- vim-javascript settings ---
 " Enables syntax highlighting for JSDocs.
