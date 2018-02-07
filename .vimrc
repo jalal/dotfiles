@@ -10,9 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 " $ vim +PluginInstall +qall
 "
 " ----- Making Vim look good ------------------------------------------
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
+"Plugin 'morhetz/gruvbox'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -56,6 +56,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-surround'
 " Align CSV files at commas, align Markdown tables, and more
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Automaticall insert the closing HTML tag
 Plugin 'HTML-AutoCloseTag'
 " Make tmux look like vim-airline (read README for extra instructions)
@@ -113,11 +114,11 @@ set background=dark
 let g:solarized_termcolors=256
 
 " Set the colorscheme
-" colorscheme solarized
+colorscheme solarized
 
 " --- gruvbox settings ---
-let g:gruvbox_italic=1
-colorscheme gruvbox
+"let g:gruvbox_italic=1
+" colorscheme gruvbox
 
 " --- vim-javascript settings ---
 " Enables syntax highlighting for JSDocs.
@@ -176,6 +177,8 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
+" ------ plasticboy/vim-markdown settings -----
+let g:vim_markdown_frontmatter = 1
 
 
 
