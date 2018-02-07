@@ -172,6 +172,10 @@ shopt -s cdspell
 
 ## end mrzool.cc
 
+export PATH="/home/jalal/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # . $HOME/.shellrc.load
 
 

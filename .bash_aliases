@@ -26,3 +26,4 @@ alias psa='ps --headers axf -o pid,ppid,pri,state,user:15,group:15,nlwp,%cpu,%me
 alias big-dir='du -ah . | sort -rh | head -20'
 alias big-files='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
+alias mycoinmon='coinmon -c eur -f BTC,ETH,XRP,LTC,NEO,ICO,XMR'
