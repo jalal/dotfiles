@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " ----- Making Vim look good ------------------------------------------
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'tomasr/molokai'
-"Plugin 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -21,10 +21,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'majutsushi/tagbar'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-syntastic/syntastic'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'ervandew/supertab'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -45,7 +48,8 @@ Plugin 'elzr/vim-json'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi'
 " Plugin 'frigoeu/psc-ide-vim'
-Plugin 'raichoo/purescript-vim'
+" Plugin 'raichoo/purescript-vim'
+"Plugin 'Shougo/deoplete.nvim'
 
 " ---- Extras/Advanced plugins ----------------------------------------
 " Buffer explorer
@@ -59,6 +63,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Automaticall insert the closing HTML tag
 Plugin 'HTML-AutoCloseTag'
+" Allow vim to run external process (such as tsserver)
+Plugin 'Shougo/vimproc'
+"
 " Make tmux look like vim-airline (read README for extra instructions)
 "Plugin 'edkolev/tmuxline.vim'
 " All the other syntax plugins I use
@@ -111,14 +118,14 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 set background=dark
 
 " Uncomment the next line if your terminal is not configured for solarized
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 
 " Set the colorscheme
-colorscheme solarized
+" colorscheme solarized
 
 " --- gruvbox settings ---
-"let g:gruvbox_italic=1
-" colorscheme gruvbox
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " --- vim-javascript settings ---
 " Enables syntax highlighting for JSDocs.
@@ -128,6 +135,10 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 " Enables syntax highlighting for Flow.
 let g:javascript_plugin_flow = 1
+
+"
+" ---- Quramy/tsuquyomi typescript settings ----
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
@@ -147,7 +158,7 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='solarized'
+let g:airline_theme='hybrid'
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
@@ -156,12 +167,21 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
  
 " ----- scrooloose/syntastic settings -----
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
+
+" ---- Shougo/deoplete settings ----
+"let g:deoplete#enable_at_startup = 1
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
@@ -180,5 +200,14 @@ augroup END
 " ------ plasticboy/vim-markdown settings -----
 let g:vim_markdown_frontmatter = 1
 
+" ============================================
+" MAPPINGS HERE
+" ============================================
+map <C-n> :NERDTreeToggle<CR>
+"map <C-m> :TagbarToggle<CR><Paste>
 
+" Ctrl-S to save the file
+nmap <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>a
 
+" Switch buffers with
