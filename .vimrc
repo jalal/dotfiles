@@ -14,6 +14,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -85,6 +86,7 @@ set number
 set showcmd
 set incsearch
 set hlsearch
+set cursorline
 
 syntax on
 
@@ -199,6 +201,11 @@ augroup END
 
 " ------ plasticboy/vim-markdown settings -----
 let g:vim_markdown_frontmatter = 1
+
+" ----- required for DevIcons -----
+set encoding=utf8
+"set guifont=Inconsolata\ Nerd\ Font\ Complete\ Mono\ 12
+set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono\ 12
 
 " ============================================
 " MAPPINGS HERE
