@@ -51,6 +51,7 @@ Plugin 'Quramy/tsuquyomi'
 " Plugin 'frigoeu/psc-ide-vim'
 " Plugin 'raichoo/purescript-vim'
 "Plugin 'Shougo/deoplete.nvim'
+Plugin 'tomlion/vim-solidity'
 
 " ---- Extras/Advanced plugins ----------------------------------------
 " Buffer explorer
@@ -169,14 +170,16 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
  
 " ----- scrooloose/syntastic settings -----
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = 'npm run eslint --'
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
@@ -217,4 +220,11 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 
-" Switch buffers with
+" switch to command mode easily (like <ESC>)
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+" add a ; at the end of the line
+nnoremap ,; m`A;<Esc>``
+inoremap ,; <Esc>m`A;<Esc>``
+
