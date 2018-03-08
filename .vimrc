@@ -29,6 +29,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ervandew/supertab'
+"Plugin 'drmikehenry/vim-fixkey'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -54,6 +55,13 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'tomlion/vim-solidity'
 
 " ---- Extras/Advanced plugins ----------------------------------------
+" Autocomplete (nvim only)
+Plugin 'roxma/nvim-completion-manager'
+Plugin 'roxma/nvim-cm-tern'
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
 " Buffer explorer
 Plugin 'jlanzarotta/bufexplorer'
 " Highlight and strip trailing whitespace
@@ -225,6 +233,8 @@ inoremap jk <ESC>
 inoremap kj <ESC>
 
 " add a ; at the end of the line
-nnoremap ,; m`A;<Esc>``
-inoremap ,; <Esc>m`A;<Esc>``
+"nnoremap ,; m`A;<Esc>``
+"inoremap ,; <Esc>m`A;<Esc>``
+nnoremap <M-;> m`A;<Esc>``
+inoremap <M-;> <Esc>m`A;<Esc>``
 
