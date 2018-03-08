@@ -2,13 +2,13 @@
 #### COLOUR (Solarized dark)
 
 # default statusbar colors
-set-option -g status-bg colour235 #base02
+set-option -g status-bg colour233 #base02
 set-option -g status-fg colour44  #pale blue
-# set-option -g status-fg default
+#set-option -g status-fg default
 set-option -g status-attr default
 
 # default window title colors
-set-window-option -g window-status-fg colour33 #base0
+set-window-option -g window-status-fg colour51 #base0
 set-window-option -g window-status-bg default
 set-window-option -g window-status-attr dim
 

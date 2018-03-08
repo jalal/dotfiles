@@ -2,14 +2,16 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ALMOST_SENSIBLE_OPTION="@almost-sensible"
-
 # used to match output from `tmux list-keys`
 KEY_BINDING_REGEX="bind-key[[:space:]]\+\(-r[[:space:]]\+\)\?\(-T prefix[[:space:]]\+\)\?"
 
 is_osx() {
 	local platform=$(uname)
 	[ "$platform" == "Darwin" ]
+}
+
+iterm_terminal() {
+	[[ "$TERM_PROGRAM" =~ ^iTerm ]]
 }
 
 command_exists() {
@@ -62,19 +64,14 @@ key_binding_not_changed() {
 	fi
 }
 
-# "almost sensible" is deprecated
-almost_sensible_on() {
-	[ "$(tmux show-option -gvq "$ALMOST_SENSIBLE_OPTION")" == "on" ]
-}
-
 main() {
 	# OPTIONS
 
-	# enable utf8
-	tmux set-option -g utf8 on
+	# enable utf8 (option removed in tmux 2.2)
+	tmux set-option -g utf8 on 2>/dev/null
 
-	# enable utf8 in tmux status-left and status-right
-	tmux set-option -g status-utf8 on
+	# enable utf8 in tmux status-left and status-right (option removed in tmux 2.2)
+	tmux set-option -g status-utf8 on 2>/dev/null
 
 	# address vim mode switching delay (http://superuser.com/a/252717/65504)
 	if server_option_value_not_changed "escape-time" "500"; then
@@ -101,9 +98,13 @@ main() {
 		tmux set-option -g default-command "reattach-to-user-namespace -l $SHELL"
 	fi
 
-	# upgrade $TERM
+	# upgrade $TERM, tmux 1.9
 	if option_value_not_changed "default-terminal" "screen"; then
 		tmux set-option -g default-terminal "screen-256color"
+	fi
+	# upgrade $TERM, tmux 2.0+
+	if server_option_value_not_changed "default-terminal" "screen"; then
+		tmux set-option -s default-terminal "screen-256color"
 	fi
 
 	# emacs key bindings in tmux command prompt (prefix + :) are better than
@@ -114,19 +115,8 @@ main() {
 	tmux set-option -g focus-events on
 
 	# super useful when using "grouped sessions" and multi-monitor setup
-	tmux set-window-option -g aggressive-resize on
-
-	# ALMOST SENSIBLE OPTIONS - DEPRECATED
-
-	if almost_sensible_on; then
-		# C-a should be the Tmux default prefix, really
-		tmux set-option -g prefix C-a
-		tmux set-option -g mode-keys vi
-
-		# enable mouse features for terminals that support it
-		tmux set-option -g mouse-resize-pane on
-		tmux set-option -g mouse-select-pane on
-		tmux set-option -g mouse-select-window on
+	if ! iterm_terminal; then
+		tmux set-window-option -g aggressive-resize on
 	fi
 
 	# DEFAULT KEY BINDINGS
@@ -136,7 +126,7 @@ main() {
 
 	# if C-b is not prefix
 	if [ $prefix != "C-b" ]; then
-		# unbind obsolte default binding
+		# unbind obsolete default binding
 		if key_binding_not_changed "C-b" "send-prefix"; then
 			tmux unbind-key C-b
 		fi

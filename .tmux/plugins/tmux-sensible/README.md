@@ -4,6 +4,8 @@ A set of tmux options that should be acceptable to everyone.
 
 Inspired by [vim-sensible](https://github.com/tpope/vim-sensible).
 
+Tested and working on Linux, OSX and Cygwin.
+
 ### Principles
 
 - `tmux-sensible` options should be acceptable to **every** tmux user!<br/>
@@ -76,37 +78,13 @@ allowing you to hold `Ctrl` and repeat `a + p`/`a + n` (if your prefix is
 If prefix is `C-b`, above keys will be `C-b` and `b`.<br/>
 If prefix is `C-z`, above keys will be `C-z` and `z`... you get the idea.
 
-### Almost sensible options - deprecated
-
-**Note**: this feature is deprecated and will be removed from `tmux-sensible`
-in the next major release. The reason for this is to focus this plugin on doing
-just one thing (and hopefully doing it well).<br/>
-If you were using 'almost sensible' the path forward is to move all the
-below options to your `.tmux.conf`.
-
-Activate these by putting `set -g @almost-sensible 'on'` in `.tmux.conf`.
-
-    # C-a should be the Tmux default prefix, really
-    set -g prefix C-a
-    set -g mode-keys vi
-
-    # enable mouse features for terminals that support it
-    set -g mouse-resize-pane on
-    set -g mouse-select-pane on
-    set -g mouse-select-window on
-
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @tpm_plugins '             \
-      tmux-plugins/tpm                \
-      tmux-plugins/tmux-sensible      \
-    '
+    set -g @plugin 'tmux-plugins/tmux-sensible'
 
 Hit `prefix + I` to fetch the plugin and source it. That's it!
-
-You might also want to restart your tmux server, just in case.
 
 ### Manual Installation
 
@@ -118,12 +96,7 @@ Add this line to the bottom of `.tmux.conf`:
 
     run-shell ~/clone/path/sensible.tmux
 
-Reload TMUX environment:
-
-    # type this in terminal
-    $ tmux source-file ~/.tmux.conf
-
-You might also want to restart your tmux server, just in case.
+Reload TMUX environment with `$ tmux source-file ~/.tmux.conf`, and that's it.
 
 ### Other goodies
 
