@@ -10,9 +10,10 @@ Plugin 'VundleVim/Vundle.vim'
 " $ vim +PluginInstall +qall
 "
 " ----- Making Vim look good ------------------------------------------
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 "Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
+"Plugin 'joshdick/onedark'
 
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
@@ -30,6 +31,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ervandew/supertab'
 "Plugin 'drmikehenry/vim-fixkey'
+Plugin 'sheerun/vim-polyglot'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -78,11 +80,14 @@ Plugin 'Shougo/vimproc'
 "
 " Make tmux look like vim-airline (read README for extra instructions)
 "Plugin 'edkolev/tmuxline.vim'
-" All the other syntax plugins I use
+" All the other syntax plugins I sometimes use
 "Plugin 'ekalinin/Dockerfile.vim'
 "Plugin 'digitaltoad/vim-jade'
 "Plugin 'tpope/vim-liquid'
 Plugin 'cakebaker/scss-syntax.vim'
+
+" Save workspaces
+Plugin 'thaerkh/vim-workspace'
 
 call vundle#end()
 
@@ -124,32 +129,19 @@ hi clear SignColumn
 "let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
 set background=dark
 
 " Uncomment the next line if your terminal is not configured for solarized
 " let g:solarized_termcolors=256
 
+" ----- altercation/vim-colors-solarized settings -----
 " Set the colorscheme
 " colorscheme solarized
 
 " --- gruvbox settings ---
-let g:gruvbox_italic=1
+"let g:gruvbox_italic=1
 colorscheme gruvbox
-
-" --- vim-javascript settings ---
-" Enables syntax highlighting for JSDocs.
-let g:javascript_plugin_jsdoc = 1
-" Enables some additional syntax highlighting for NGDocs. Requires JSDoc
-" plugin to be enabled as well.
-let g:javascript_plugin_ngdoc = 1
-" Enables syntax highlighting for Flow.
-let g:javascript_plugin_flow = 1
-
-"
-" ---- Quramy/tsuquyomi typescript settings ----
-autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
@@ -176,7 +168,26 @@ let g:airline_theme='hybrid'
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 0
- 
+
+" ----- ctrlp settings -----
+let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_custom_ignore = { 'dir':['node_modules','no-upload','no-uploads'] }
+"let g:ctrlp_custom_ignore = ['node_modules','no-upload','no-uploads']
+set wildignore+=*/node_modules/*,*/no-upload/*,*/no-uploads/*
+
+" --- vim-javascript settings ---
+" Enables syntax highlighting for JSDocs.
+let g:javascript_plugin_jsdoc = 1
+" Enables some additional syntax highlighting for NGDocs. Requires JSDoc
+" plugin to be enabled as well.
+let g:javascript_plugin_ngdoc = 1
+" Enables syntax highlighting for Flow.
+let g:javascript_plugin_flow = 1
+
+"
+" ---- Quramy/tsuquyomi typescript settings ----
+autocmd FileType typescript setlocal completeopt+=menu,preview
+
 " ----- scrooloose/syntastic settings -----
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
@@ -192,6 +203,7 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
+let g:syntastic_scss_checkers = []
 
 " ---- Shougo/deoplete settings ----
 "let g:deoplete#enable_at_startup = 1
@@ -213,16 +225,31 @@ augroup END
 " ------ plasticboy/vim-markdown settings -----
 let g:vim_markdown_frontmatter = 1
 
+" ----- Plugin 'thaerkh/vim-workspace' settings -----
+let g:workspace_session_disable_on_args = 1
+let g:workspace_session_name = '.session.vim'
+let g:workspace_autosave_ignore = ['gitcommit', 'NERDTree', 'tagbar']
+
 " ----- required for DevIcons -----
 set encoding=utf8
 "set guifont=Inconsolata\ Nerd\ Font\ Complete\ Mono\ 12
 set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono\ 12
+
+" some python Environment settings
+let g:python3_host_prog = '/home/jalal/.pyenv/versions/general/bin/python'
+
 
 " ============================================
 " MAPPINGS HERE
 " ============================================
 map <C-n> :NERDTreeToggle<CR>
 "map <C-m> :TagbarToggle<CR><Paste>
+
+" switch to next/previous buffer
+nmap <C-[> :bp<CR>
+imap <Esc><C-[> :bp<CR>
+nmap <C-]> :bn<CR>
+imap <Esc><C-]> :bn<CR>
 
 " Ctrl-S to save the file
 nmap <C-s> :w<CR>
@@ -232,9 +259,11 @@ imap <C-s> <Esc>:w<CR>a
 inoremap jk <ESC>
 inoremap kj <ESC>
 
-" add a ; at the end of the line
-"nnoremap ,; m`A;<Esc>``
-"inoremap ,; <Esc>m`A;<Esc>``
+" add a ; at the end of the line with Alt-;
 nnoremap <M-;> m`A;<Esc>``
 inoremap <M-;> <Esc>m`A;<Esc>``
+
+" Toggle Workspace sessions
+nnoremap <Leader>ss :ToggleWorkspace<CR>
+
 
