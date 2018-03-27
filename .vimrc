@@ -224,6 +224,7 @@ augroup END
 
 " ------ plasticboy/vim-markdown settings -----
 let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
 
 " ----- Plugin 'thaerkh/vim-workspace' settings -----
 let g:workspace_session_disable_on_args = 1
@@ -238,32 +239,5 @@ set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono\ 12
 " some python Environment settings
 let g:python3_host_prog = '/home/jalal/.pyenv/versions/general/bin/python'
 
-
-" ============================================
-" MAPPINGS HERE
-" ============================================
-map <C-n> :NERDTreeToggle<CR>
-"map <C-m> :TagbarToggle<CR><Paste>
-
-" switch to next/previous buffer
-nmap <C-[> :bp<CR>
-imap <Esc><C-[> :bp<CR>
-nmap <C-]> :bn<CR>
-imap <Esc><C-]> :bn<CR>
-
-" Ctrl-S to save the file
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
-
-" switch to command mode easily (like <ESC>)
-inoremap jk <ESC>
-inoremap kj <ESC>
-
-" add a ; at the end of the line with Alt-;
-nnoremap <M-;> m`A;<Esc>``
-inoremap <M-;> <Esc>m`A;<Esc>``
-
-" Toggle Workspace sessions
-nnoremap <Leader>ss :ToggleWorkspace<CR>
-
+source .vim/keymappings
 
