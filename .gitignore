@@ -12,20 +12,26 @@
 !.filezilla
 !.sdirs
 !.tmux.conf
+!.datrc
 !.vimrc
 !.vim
+!.vim/keymappings.vim
 !.zshrc
 !.xinputrc
 !.tnsrc
 !.sshlist
 !.screenrc
 !.npmrc
+!.nvmrc
+!.rvmrc
 !.netrc
 !.mongorc.js
 !.jshintrc
+!.jshintignore
 !.pearrc
 !.profile
 !.hg*
 !.gvimrc
+!.sshplus
 .bash_history
 
