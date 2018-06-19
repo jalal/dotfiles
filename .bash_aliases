@@ -27,3 +27,6 @@ alias big-dir='du -ah . | sort -rh | head -20'
 alias big-files='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
 alias mycoinmon='coinmon -c eur -f BTC,ETH,XRP,LTC,NEO,ICO,XMR'
+
+alias gnomesocks='ssh -p 2222 -D 8123 -f -C -q -N theadmin@gnomedia.com'
+

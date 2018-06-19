@@ -73,7 +73,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 " ----- Syntax plugins ------------------------------------------------
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 " Plugin 'jez/vim-c0'
 " Plugin 'jez/vim-ispc'
 " Plugin 'kchmck/vim-coffee-script'
