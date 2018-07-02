@@ -1,0 +1,12 @@
+Harvey|gnome-terminal| --profile=Remote -x ssh gnomedia@harvey.gnomedia.net
+sep
+g.com|gnome-terminal| --profile=Remote -x ssh -p 2222 theadmin@gnomedia.eu
+ic-audio|gnome-terminal| --profile=Remote -x ssh -p 2222 theadmin@ic-audio.com
+sep
+Hive|gnome-terminal| --profile=Remote -x ssh -p 2222 theadmin@81.94.205.27
+DPM|gnome-terminal| --profile=Remote -x ssh -p 2222 theadmin@206.225.95.173
+Silence|gnome-terminal| --profile=Remote -x ssh joxford@ssh.silenceisdefeat.com
+sep
+old Leon|gnome-terminal| --profile=Remote -x ssh gnomedia@leon.gnomedia.net
+old Tigger|gnome-terminal| --profile=Remote -x ssh gnomedia@tigger.gnomedia.net
+old g.com|gnome-terminal| --profile=Remote -x ssh -p 2222 gnomedia@vps.gnomedia.com
