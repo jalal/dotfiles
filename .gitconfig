@@ -1,6 +1,7 @@
 [user]
 	name = jalal (Tim Pushman)
 	email = thpushman@gmail.com
+	signingkey = 92DF673F
 [core]
 	autocrlf = input
 	safecrlf = warn

@@ -1,6 +1,0 @@
-syntax: glob
-*.swp
-*~
-no-upload
-no-uploads
-

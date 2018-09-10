@@ -12,6 +12,8 @@ alias la='ls -A'
 alias lt='ls -ratl'
 alias dir='ls -al'
 
+# alias vim=nvim
+
 # Copy file into clipboard
 alias cs='xclip -selection clipboard'
 # and paste it if needed
