@@ -16,6 +16,7 @@
 		</Resources>
 		<Language id="en_GB" date="">
 			<Font font="Noto Sans 10" width="808" height="19" />
+			<Dialog name="Settings" width="614" />
 		</Language>
 	</Layout>
 </FileZilla3>
