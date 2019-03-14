@@ -4,13 +4,16 @@ alias ducks='du -cks * | sort -rn | head -11'
 alias tma='tmux attach'
 alias cursor-reset="echo -ne '\e]12;white\a'"
 
-alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias lt='ls -ratl'
 alias dir='ls -al'
+
+# this stops grep from scanning VCS directories
+# export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
+alias grep='grep --color=auto --exclude=\*/\.svn --exclude-dir=\.hg --exclude-dir=\.git'
 
 # alias vim=nvim
 

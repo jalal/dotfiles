@@ -87,13 +87,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -121,28 +114,13 @@ if command -v most > /dev/null 2>&1; then
         export PAGER="most"
 fi
 
-# this stops grep from scanning VCS directories
-# export GREP_OPTIONS='--exclude=\*/\.svn/\* --exclude-dir=\.hg' 
-alias grep='grep --exclude=\*/\.svn --exclude-dir=\.hg --exclude-dir=\.git'
-
 # a bash shell bookmark script
 if [ -f ~/.local/bin/bashmarks.sh ]; then
     source ~/.local/bin/bashmarks.sh
 fi
 
-CHROME_BIN=/usr/bin/chromium-browser
-export CHROME_BIN
-
-export PATH=$HOME/.node/bin:$PATH
-export NODE_PATH=$NODE_PATH:/home/jalal/.node/lib/node_modules
-
-export ANDROID_HOME=/home/jalal/apps/android-sdk-linux/
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-export PATH=$PATH:/opt/genymobile/genymotion
-export PATH=$PATH:/usr/local/go/bin
-
-export GOPATH=$HOME/go
+# load autopath
+. /usr/share/autojump/autojump.sh
 
 # add this configuration to ~/.bashrc
 export HSTR_CONFIG=hicolor         # get more colors
@@ -153,10 +131,6 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 # if this is interactive shell, then bind hh to Ctrl-r
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
-
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 ## the following set of commands are from
 ## http://mrzool.cc/writing/sensible-bash/
@@ -171,42 +145,11 @@ shopt -s dirspell
 shopt -s cdspell
 ## end mrzool.cc
 
-export PATH="/home/jalal/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# . $HOME/.shellrc.load
-export EDITOR=/usr/bin/nvim
-
-# load autopath
-. /usr/share/autojump/autojump.sh
-
 # load the bash-git-prompt
 # (can be toggled with `bash_git_toggle`
 GIT_PROMPT_ONLY_IN_REPO=1
-# GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 GIT_PROMPT_IGNORE_SUBMODULES=1 # uncomment to avoid searching for changed files in submodules
-
-# GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
-# GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines counting of untracked files
-
-# GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
-
-# GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
-
-# GIT_PROMPT_START=...    # uncomment for custom prompt start sequence
-# GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
-
 # as last entry source the gitprompt script
-# GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
-# GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 GIT_PROMPT_THEME=Solarized_Ubuntu # use theme optimized for solarized color scheme
 source ~/.bash-git-prompt/gitprompt.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-if [ -n "$TMUX" ]; then
-    nvm use
-fi
