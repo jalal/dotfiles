@@ -3,6 +3,8 @@
 [A-z]*
 .[A-z]*
 !.byobu*
+!.tmux.conf
+!.tmux/.tmux*
 !.gitignore*
 !.gitconfig
 !.netrc
