@@ -1,0 +1,497 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+#===[ GENERAL SETTINGS ]====================#
+
+# Mod key is the "Super" key (or Meta, usually has the Windows logo on it)
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# some variables]
+set $smallwidth 900
+set $smallheight  640
+set $bigwidth     1500
+set $bigheight    800
+set $defaultgaps  25
+
+#---( workspaces )---#
+set $ws1 1
+set $ws1 2
+set $ws1 3
+set $ws1 4
+set $ws1 5
+set $ws1 6
+set $ws1 7
+set $ws1 8
+set $ws1 9
+
+
+############################################
+## LOOK AND FEEL
+############################################
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below. ISO 10646 = Unicode
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, if you need a lot of unicode glyphs or
+# right-to-left text rendering, you should instead use pango for rendering and
+# chose a FreeType font, such as:
+font pango:Droid Sans Mono 8
+
+# set up gaps
+for_window [class="^.*"] border pixel 5
+gaps inner $defaultgaps
+
+#---( colors table )---#
+
+# These colors at bar and window color settings
+set $bg-color 	         #242424
+set $focus-color 	       #fdb95b
+set $inactive-bg-color   #ffddaf
+set $inactive-color   #222222
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color 	 #d42121
+
+# set $bg-color 	         #2f343f
+# set $inactive-bg-color   #2f343f
+# set $text-color          #f3f4f5
+# set $inactive-text-color #676E7D
+# set $urgent-bg-color 	 #E53935
+
+# class                 border  backgr. text    indicator
+#client.focused          #4c7899 #111111 #00b2b2 #2e9ef4 #990000
+##client.focused          #990000 #111111 #00b2b2 #2e9ef4
+##client.focused_inactive #333333 #000000 #ffffff #484e50 
+##client.unfocused        #333333 #000000 #888888 #292d2e
+##client.urgent           #2f343a #900000 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000 #990000
+##client.background       #000000
+# window colors
+#                       border              background         text                 indicator
+client.placeholder      $bg-color          $bg-color          $text-color          #00ff00
+client.background      $bg-color          $bg-color          $text-color          #00ff00
+client.focused          $bg-color          $focus-color          $text-color          $focus-color
+client.unfocused        $inactive-color $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.focused_inactive $inactive-color $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.urgent 		      $urgent-bg-color   $urgent-bg-color   $text-color          $urgent-bg-color
+
+############################################
+## AUTORUN APPLICATIONS
+############################################
+
+exec_always --no-startup-id ~/.config/arandr.conf.sh
+exec_always --no-startup-id /usr/bin/compton -b --config /home/jalal/.config/compton.conf
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+exec_always --no-startup-id 'clipit'
+exec --no-startup-id 'xset -b'
+exec --no-startup-id 'SpiderOakONE'
+#exec_always --no-startup-id 'xset b off'
+
+# Startup items recycling station:
+#exec_always --no-startup-id xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# exec_always --no-startup-id sleep 2 && feh --bg-fill /home/jalal/Pictures/Wallpapers/default.jpg
+#exec --no-startup-id 'kmix'
+#exec --no-startup-id 'nm-applet'
+#exec --no-startup-id 'redshift-gtk -l 44.43:26.09 -t 5700:4850'
+#exec --no-startup-id 'xfce4-power-manager'
+
+assign [class="Thunderbird"] $ws9
+assign [class="Sublime Text"] $ws3
+
+####################
+# DROPDOWN WINDOWS #
+####################
+
+# scratchpad terminal
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set $smallwidth $smallheight
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+
+# ranger scratchpad
+for_window [instance="files"] floating enable
+for_window [instance="files"] resize set $smallwidth $smallheight
+for_window [instance="files"] move position center
+for_window [instance="files"] move scratchpad
+
+for_window [class="(?i)speedcrunch"] floating enable
+for_window [class="(?i)speedcrunch"] resize set $smallwidth $smallheight
+for_window [class="(?i)speedcrunch"] move position center
+
+#===[ KEY BINDINGS ]====================#
+
+#---( focus )---#
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+
+#---( moving / splitting / layout)---#
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+Tab scratchpad show
+
+# toggle sticky
+bindsym $mod+Shift+s sticky toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+n workspace next
+bindsym $mod+p workspace prev
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# move workspace to monitor
+bindsym $mod+Ctrl+greater move workspace to output up
+bindsym $mod+Ctrl+less move workspace to output down
+
+bindsym $mod+z               exec --no-startup-id dmenumount
+bindsym $mod+Shift+z         exec --no-startup-id dmenuumount
+#bindsym $mod+Control+z
+#bindsym $mod+Shift+Control+z
+
+# Fire up the layout_manager
+bindsym $mod+Shift+y         exec --no-startup-id bash ~/.config/i3/scripts/layout_manager.sh
+
+########################
+# FUNCTION KEYBINDINGS #
+########################
+
+# bindsym $mod+F1        exec --no-startup-id displayctrl HDMI-3
+#bindsym $mod+Shift+F1
+
+# bindsym $mod+F2        exec --no-startup-id displayctrl HDMI-2
+#bindsym $mod+Shift+F2
+
+# bindsym $mod+F3        exec --no-startup-id displayctrl -r HDMI-2 HDMI-3
+# bindsym $mod+Shift+F3  exec --no-startup-id displayctrl -r HDMI-2 -p HDMI-3
+
+# bindsym $mod+F4        exec --no-startup-id displayctrl LVDS-1
+#bindsym $mod+Shift+F4
+
+# bindsym $mod+F5        exec --no-startup-id i3-powersaver
+#bindsym $mod+Shift+F5
+
+#bindsym $mod+F6
+#bindsym $mod+Shift+F6
+
+#bfloaple-cursors-apply)bnting enableindsym $mod+F7
+#bindsym $mod+Shift+F7
+
+#bindsym $mod+F8
+#bindsym $mod+Shift+F8
+
+#bindsym $mod+F9
+#bindsym $mod+Shift+F9
+
+#bindsym $mod+F10
+#bindsym $mod+Shift+F10
+
+#bindsym $mod+F11
+#bindsym $mod+Shift+F11
+
+# bindsym $mod+F12                        exec --no-startup-id toggletrackpad
+#bindsym $mod+Shift+F12
+
+# bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
+#bindsym $mod+Shift+Delete
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%  #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%  #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+bindsym XF86HomePage exec
+bindsym XF86Tools exec
+bindsym XF86Explorer exec
+
+#----------[ Gaps ]-----------#
+gaps inner 10
+gaps outer -4
+smart_gaps on
+
+#---( resizing windows )---#
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+#---( i3 stuff )---#
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Set shut down, restart and locking features
+bindsym $mod+Shift+e mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+mode "$mode_display" {
+    bindsym v exec --no-startup-id xrandr --output eDP-1 --auto --below LVDS1, mode "default"
+    bindsym h exec --no-startup-id xrandr --output eDP-1 --auto --below LVDS1, mode "default"
+    bindsym x exec --no-startup-id xrandr --output DP-1 --auto --off, mode "default"
+    bindsym y exec --no-startup-id xrandr --output DP-1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+Shift+d mode "$mode_display"
+
+#
+#
+# start application launchers
+#bindsym $mod+d exec ~/.local/bin/dmenu_run_history -p 'Run: ' -l 10 -i -nb '#000000' -nf '#4c7899' -fn 'Droid Sans Mono-9:bold'
+#bindsym $mod+q exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -p 'Run: ' -l 10 -i -nb '#000000' -nf '#4c7899' -fn 'Droid Sans Mono-9:bold'"
+#bindsym $mod+x exec krunner
+
+
+#---( direct launchers )---#
+
+#bindsym $mod+Return exec sakura
+bindsym $mod+Return exec konsole
+bindsym $mod+backslash exec konsole
+#bindsym $mod+Shift+Return exec "emacsclient -c"
+#bindsym $mod+Shift+F7 exec --no-startup-id "nitrogen --restore"
+bindsym $mod+Shift+F1 exec "thunderbird"
+bindsym $mod+Shift+F2 exec "firefox"
+bindsym $mod+Shift+F3 exec "brave-browser-beta"
+#bindsym $mod+Shift+F5 exec --no-startup-id "~/.local/bin/camshot"
+#bindsym $mod+Shift+Delete exec --no-startup-id "~/.local/bin/toggle_touchpad"
+#bindsym $mod+Shift+p exec --no-startup-id "konsole -e htop"
+bindsym $mod+Shift+F6 exec --no-startup-id "systemsettings5"
+#bindsym Print exec --no-startup-id "XDG_CURRENT_DESKTOP=kde spectacle"
+#bindsym $mod+Print exec --no-startup-id "~/.local/bin/xflock4"
+#bindsym $mod+backslash exec --no-startup-id "XDG_CURRENT_DESKTOP=kde dolphin"
+#bindcode 148 exec --no-startup-id "XDG_CURRENT_DESKTOP=kde kcalc"
+
+
+# Key bindings recycling station:
+#bindsym XF86MyComputer exec --no-startup-id "XDG_CURRENT_DESKTOP=kde dolphin"
+#bindsym XF86AudioRaiseVolume exec --no-startup-id "~/.local/bin/volume -i 5 -n"
+#bindsym XF86AudioLowerVolume exec --no-startup-id "~/.local/bin/volume -d 5 -n"
+#bindsym XF86AudioMute exec --no-startup-id "~/.local/bin/volume -m -n"
+#bindsym XF86AudioMicMute exec --no-startup-id "~/.local/bin/volume -r -n"
+#bindsym KP_8 exec --no-startup-id "~/.local/bin/volume -i 5 -n"
+#bindsym KP_2 exec --no-startup-id "~/.local/bin/volume -d 5 -n"
+#bindsym KP_5 exec --no-startup-id "~/.local/bin/volume -m -n"
+#bindsym KP_1 exec --no-startup-id "~/.local/bin/volume -r -n"
+#bindsym XF86AudioRaiseVolume exec --no-startup-id "/home/victor/scripts/volnoti-handle.sh up"
+#bindsym XF86AudioLowerVolume exec --no-startup-id "/home/victor/scripts/volnoti-handle.sh down"
+
+
+#----------[ STATUS BAR ]----------#
+
+# bar {
+    # If you want a bar, uncomment one of these:
+    # status_command $HOME/.local/bin/conky-i3bar.sh
+    # status_command i3status
+    # status_command i3blocks
+		# mode invisible
+    # colors {
+        # background #111111
+        # statusline #ffffff
+        # separator #cccccc
+#
+        # focused_workspace  #555555 #121212 #dddddd
+        # active_workspace   #555555 #555555 #dddddd
+        # inactive_workspace #555555 #555555 #dddddd
+        # urgent_workspace   #555555 #770000 #dddddd
+#
+        # focused_workspace  #555555 #666666 #dddddd
+        # active_workspace   #555555 #555555 #dddddd
+        # inactive_workspace #555555 #111111 #dddddd
+        # urgent_workspace   #555555 #770000 #dddddd
+    # }
+#
+    # tray_output eDP1
+    # tray_output none
+# }
+
+#----------[ WORKPLACE ASSIGNMENTS ]------------#
+assign [class="Thunderbird"] 9
+
+#----------[ MISC SETTINGS ]----------#
+
+# Pressing $mod and current workspace number takes you back to the previousle active workspace
+workspace_auto_back_and_forth yes
+
+
+
+# JAL section here for rofi
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 14"
+
+
+#---( windows rules )---#
+
+# No border windows
+for_window [class="(?i)terminator"] border none 
+for_window [class="(?i)terminology"] border none 
+for_window [class="(?i)dwb"] border none 
+for_window [class="(?i)luakit"] border none 
+for_window [class="(?i)rambox"] border none 
+for_window [class="(?i)franz"] border none 
+# for_window [class="(?i)firefox"] border none
+for_window [class="(?i)iceweasel"] border none 
+# for_window [class="(?i)Brave-browser-beta"] border none
+for_window [class="(?i)kontact"] border none
+for_window [class="(?i)kmail"] border none
+#for_window [class="(?i)emacs"] border none
+for_window [class="(?i)chrom"] border none
+for_window [class="(?i)gvim"] border none
+for_window [class="(?i)vivaldi"] border none
+
+# Float by name
+for_window [title="Nitrogen"] floating enable
+for_window [title="Install user style"] floating enable
+for_window [class="plasmashell"] floating enable
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="systemsettings"] floating enable
+
+# Float by type
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="(?i)prompt"] floating enable border none
+
+
+#---( focus related )---)
+
+focus_follows_mouse no
+
+no_focus [class="plasmashell"]
+# no_focus [window_role="pop-up"]
+no_focus [window_type="notification"]
+
+focus_on_window_activation none
+
+exec_always ~/.config/polybar/polybar.sh &
+

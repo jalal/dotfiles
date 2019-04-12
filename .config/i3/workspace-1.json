@@ -1,0 +1,115 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1054,
+               "width": 960,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jalal : ranger — Konsole",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^konsole$",
+               // "instance": "^konsole$",
+               // "title": "^jalal\\ \\:\\ ranger\\ \\—\\ Konsole$",
+               // "transient_for": "^$",
+               // "window_role": "^MainWindow\\#1$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1054,
+               "width": 960,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jalal : bash — Konsole",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^konsole$",
+               // "instance": "^konsole$",
+               // "title": "^jalal\\ \\:\\ bash\\ \\—\\ Konsole$",
+               // "transient_for": "^$",
+               // "window_role": "^MainWindow\\#1$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1054,
+               "width": 960,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jalal : cmus — Konsole",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^konsole$",
+               // "instance": "^konsole$",
+               // "title": "^jalal\\ \\:\\ cmus\\ \\—\\ Konsole$",
+               // "transient_for": "^$",
+               // "window_role": "^MainWindow\\#1$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1054,
+               "width": 960,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jalal : htop — Konsole",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^konsole$",
+               // "instance": "^konsole$",
+               // "title": "^jalal\\ \\:\\ htop\\ \\—\\ Konsole$",
+               // "transient_for": "^$",
+               // "window_role": "^MainWindow\\#1$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

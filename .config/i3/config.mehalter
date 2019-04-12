@@ -1,0 +1,507 @@
+# $mod = Alt
+set $mod Mod4
+floating_modifier $mod
+
+# set variables
+set $smallwidth   900
+set $smallheight  640
+set $bigwidth     1500
+set $bigheight    800
+set $defaultgaps  25
+
+
+###############
+# LOOK & FEEL #
+###############
+# Set fonts
+font pango:mono
+
+# set up gaps
+for_window [class="^.*"] border pixel 5
+gaps inner $defaultgaps
+
+# colors
+set_from_resource $bg-color            i3wm.color7 #676E7D
+set_from_resource $inactive-bg-color   i3wm.color0 #2f343f
+set_from_resource $text-color          i3wm.color7 #f3f4f5
+set_from_resource $inactive-text-color i3wm.color8 #676E7D
+set_from_resource $urgent-bg-color     i3wm.color1 #E53935
+
+# window colors         border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
+
+# hide edge borders
+hide_edge_borders both
+
+
+##############
+# WORKSPACES #
+##############
+
+# wokspace names
+set $workspace1  "1:Laptop"
+set $workspace2  "2:Web"
+set $workspace3  "3"
+set $workspace4  "4"
+set $workspace5  "5"
+set $workspace6  "6"
+set $workspace7  "7"
+set $workspace8  "8"
+set $workspace9  "9:Email"
+set $workspace10 "10"
+
+
+####################
+# DROPDOWN WINDOWS #
+####################
+
+# scratchpad terminal
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set $smallwidth $smallheight
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+
+# ranger scratchpad
+for_window [instance="files"] floating enable
+for_window [instance="files"] resize set $smallwidth $smallheight
+for_window [instance="files"] move position center
+for_window [instance="files"] move scratchpad
+
+# start neomutt in floating window
+for_window [instance="email"] floating enable
+for_window [instance="email"] resize set $smallwidth $smallheight
+for_window [instance="email"] move position center
+for_window [instance="email"] move scratchpad
+
+# bc scratchpad
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set $smallwidth $smallheight
+for_window [instance="math"] move position center
+for_window [instance="math"] move scratchpad
+
+# start khal in floating window
+for_window [instance="cal"] floating enable
+for_window [instance="cal"] resize set $smallwidth $smallheight
+for_window [instance="cal"] move position center
+for_window [instance="cal"] move scratchpad
+
+# start upass in floating window
+for_window [instance="upass"] floating enable
+for_window [instance="upass"] resize set $smallwidth $smallheight
+for_window [instance="upass"] move position center
+for_window [instance="upass"] move scratchpad
+
+# start ncpamixer in floating window
+for_window [instance="ncpamixer"] floating enable
+for_window [instance="ncpamixer"] resize set $smallwidth $smallheight
+for_window [instance="ncpamixer"] move position center
+for_window [instance="ncpamixer"] move scratchpad
+
+# start weather in floating window
+for_window [instance="weather"] floating enable
+for_window [instance="weather"] resize set 1030 660
+for_window [instance="weather"] move position center
+for_window [instance="weather"] move scratchpad
+
+# start tasks in floating window
+for_window [instance="tasks"] floating enable
+for_window [instance="tasks"] resize set $bigwidth $bigheight
+for_window [instance="tasks"] move position center
+for_window [instance="tasks"] move scratchpad
+
+# webcam 1 dropdown
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+for_window [title="video0 - mpv"] border none
+
+# webcam 2 dropdown
+for_window [title="video1 - mpv"] floating enable
+for_window [title="video1 - mpv"] sticky enable
+for_window [title="video1 - mpv"] border none
+
+
+########################
+# AUTORUN APPLICATIONS #
+########################
+
+# start compositor
+exec_always --no-startup-id systemctl --user restart compton
+
+# set up caps lock - press = escape, hold = ctrl
+exec_always --no-startup-id remaps
+
+# disable trackpad
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+
+# start unclutter
+exec --no-startup-id systemctl --user start unclutter
+
+# set wallpaper and colors
+exec_always --no-startup-id setbackground
+exec_always --no-startup-id $HOME/.config/wpg/wp_init.sh
+
+# application placements
+assign [class="Google-chrome"] $workspace1
+assign [class="Firefox"] $workspace1
+assign [class="qutebrowser"] $workspace1
+assign [class="Skype"] $workspace3
+assign [class="Telegram"] $workspace3
+
+for_window [title="^pdfpc - present"] border none floating enable
+
+# start dual monitor
+exec --no-startup-id displayctrl -r HDMI-2 HDMI-3
+
+# browser
+exec --no-startup-id $BROWSER
+# terminal
+exec --no-startup-id i3-msg 'workspace $workspace2; exec $TERMINAL; workspace $workspace1'
+
+bar {
+  font pango:mono 12
+  status_command i3blocks
+  position top
+  mode dock
+  modifier None
+  colors {
+    background $inactive-bg-color
+    statusline $bg-color
+    focused_workspace   $inactive-bg-color  $inactive-bg-color $text-color
+    active_workspace    $inactive-bg-color  $inactive-bg-color $inactive-text-color
+    inactive_workspace  $inactive-bg-color  $inactive-bg-color $inactive-text-color
+    urgent_workspace    $urgent-bg-color    $urgent-bg-color   $text-color
+  }
+}
+
+
+######################
+# LETTER KEYBINDINGS #
+######################
+
+#bindsym $mod+q
+bindsym $mod+Shift+q         kill
+#bindsym $mod+Control+q
+#bindsym $mod+Shift+Control+q
+
+bindsym $mod+w               exec --no-startup-id $BROWSER
+bindsym $mod+Shift+w         exec --no-startup-id i3-cliprog weather "wttr && read -k1 -s"
+#bindsym $mod+Control+w
+#bindsym $mod+Shift+Control+w
+
+bindsym $mod+e               exec --no-startup-id dmenuunicode
+#bindsym $mod+Shift+e
+#bindsym $mod+Control+e
+#bindsym $mod+Shift+Control+e
+
+bindsym $mod+r               exec --no-startup-id i3-cliprog files "$FILE"
+bindsym $mod+Shift+r         exec --no-startup-id i3-cliprog math "R -q --no-save"
+#bindsym $mod+Control+r
+#bindsym $mod+Shift+Control+r
+
+#bindsym $mod+t
+bindsym $mod+Shift+t         exec --no-startup-id i3-cliprog tasks "gotop"
+#bindsym $mod+Control+t
+#bindsym $mod+Shift+Control+t
+
+#bindsym $mod+y
+#bindsym $mod+Shift+y
+#bindsym $mod+Control+y
+#bindsym $mod+Shift+Control+y
+
+bindsym $mod+u               exec --no-startup-id i3-cliprog dropdown "tmuxinator scratchpad"
+#bindsym $mod+Shift+u
+#bindsym $mod+Control+u
+#bindsym $mod+Shift+Control+u
+
+#bindsym $mod+i
+#bindsym $mod+Shift+i
+#bindsym $mod+Control+i
+#bindsym $mod+Shift+Control+i
+
+#bindsym $mod+o
+bindsym $mod+Shift+o         exec --no-startup-id vim-anywhere
+#bindsym $mod+Control+o
+#bindsym $mod+Shift+Control+o
+
+#bindsym $mod+p
+bindsym $mod+Shift+p         exec --no-startup-id i3-cliprog upass "upass"
+#bindsym $mod+Control+p
+#bindsym $mod+Shift+Control+p
+
+bindsym $mod+a               focus parent
+bindsym $mod+Shift+a         exec --no-startup-id i3-cliprog ncpamixer "ncpamixer"
+#bindsym $mod+Control+a
+#bindsym $mod+Shift+Control+a
+
+bindsym $mod+s               split toggle; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+s         exec --no-startup-id i3-workspaceswap; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Control+s
+#bindsym $mod+Shift+Control+s
+
+bindsym $mod+d               focus child
+bindsym $mod+Shift+d         exec --no-startup-id displayselect
+#bindsym $mod+Control+d
+#bindsym $mod+Shift+Control+d
+
+bindsym $mod+f               fullscreen toggle
+bindsym $mod+Shift+f         exec --no-startup-id firefox
+#bindsym $mod+Control+f
+#bindsym $mod+Shift+Control+f
+
+#bindsym $mod+g
+#bindsym $mod+Shift+g
+#bindsym $mod+Control+g
+bindsym $mod+Shift+Control+g exec --no-startup-id killall gpymusic & killall cava & echo '' > $HOME/.nowplaying
+
+bindsym $mod+h               focus left; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+h         move left; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Control+h       exec --no-startup-id i3-resize left
+bindsym $mod+Shift+Control+h move workspace to output left; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+
+bindsym $mod+j               focus down; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+j         move down; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Control+j       exec --no-startup-id i3-resize down
+bindsym $mod+Shift+Control+j exec --no-startup-id amixer -D pulse sset Master 5%-; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+
+bindsym $mod+k               focus up; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+k         move up; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Control+k       exec --no-startup-id i3-resize up
+bindsym $mod+Shift+Control+k exec --no-startup-id amixer -D pulse sset Master 5%+; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+
+bindsym $mod+l               focus right; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+l         move right; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Control+l       exec --no-startup-id i3-resize right
+bindsym $mod+Shift+Control+l move workspace to output right; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+
+bindsym $mod+z               exec --no-startup-id dmenumount
+bindsym $mod+Shift+z         exec --no-startup-id dmenuumount
+#bindsym $mod+Control+z
+#bindsym $mod+Shift+Control+z
+
+#bindsym $mod+x
+#bindsym $mod+Shift+x
+#bindsym $mod+Control+x
+#bindsym $mod+Shift+Control+x
+
+bindsym $mod+c               exec --no-startup-id $TERMINAL -e 'i3-runner "weechat"'
+bindsym $mod+Shift+c         exec --no-startup-id i3-cliprog cal "ikhal"
+#bindsym $mod+Control+c
+#bindsym $mod+Shift+Control+c
+
+#bindsym $mod+v
+bindsym $mod+Shift+v         exec --no-startup-id $TERMINAL -e 'i3-runner "rtv --no-flash"'
+#bindsym $mod+Control+v
+#bindsym $mod+Shift+Control+v
+
+bindsym $mod+b               exec --no-startup-id dmenuexpand $HOME/.bookmarks $BROWSER "Bookmarks:" $BROWSER
+bindsym $mod+Shift+b         exec --no-startup-id dmenuwpg
+#bindsym $mod+Control+b
+#bindsym $mod+Shift+Control+b
+
+#bindsym $mod+n
+bindsym $mod+Shift+n         exec --no-startup-id $TERMINAL -e 'i3-runner "newsboat"'
+#bindsym $mod+Control+n
+#bindsym $mod+Shift+Control+n
+
+bindsym $mod+m               exec --no-startup-id i3-cliprog email "neomutt"
+bindsym $mod+Shift+m         exec --no-startup-id $TERMINAL --name=gpymusic -e 'i3-runner "gpymusic"'
+#bindsym $mod+Control+m
+bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+
+
+######################
+# NUMBER KEYBINDINGS #
+######################
+
+bindsym $mod+1               workspace $workspace1; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+1         move container to workspace $workspace1; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+1
+
+bindsym $mod+2               workspace $workspace2; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+2         move container to workspace $workspace2; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+2
+
+bindsym $mod+3               workspace $workspace3; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+3         move container to workspace $workspace3; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+3
+
+bindsym $mod+4               workspace $workspace4; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+4         move container to workspace $workspace4; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+4
+
+bindsym $mod+5               workspace $workspace5; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+5         move container to workspace $workspace5; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+5
+
+bindsym $mod+6               workspace $workspace6; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+6         move container to workspace $workspace6; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+6
+
+bindsym $mod+7               workspace $workspace7; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+7         move container to workspace $workspace7; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+7
+
+bindsym $mod+8               workspace $workspace8; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+8         move container to workspace $workspace8; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+8
+
+bindsym $mod+9               workspace $workspace9; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+9         move container to workspace $workspace9; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+9
+
+bindsym $mod+0               workspace $workspace10; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+bindsym $mod+Shift+0         move container to workspace $workspace10; exec --no-startup-id bash -c "$I3BLOCKS_LAYOUT"
+#bindsym $mod+Shift+Control+0
+bindsym $mod+Control+0       gaps inner current set $defaultgaps
+
+
+#######################
+# SPECIAL KEYBINDINGS #
+#######################
+
+#bindsym $mod+grave
+#bindsym $mod+Shift+grave
+#bindsym $mod+Shift+Control+grave
+
+#bindsym $mod+minus
+#bindsym $mod+Shift+minus
+#bindsym $mod+Shift+Control+minus
+bindsym $mod+Control+minus              gaps inner current plus 5
+
+#bindsym $mod+equal
+#bindsym $mod+Shift+equal
+#bindsym $mod+Shift+Control+equal
+bindsym $mod+Control+equal              gaps inner current minus 5
+
+bindsym $mod+Tab                        workspace back_and_forth
+#bindsym $mod+Shift+Tab
+#bindsym $mod+Shift+Control+Tab
+
+#bindsym $mod+bracketleft
+#bindsym $mod+Shift+bracketleft
+bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id light -U 10
+
+#bindsym $mod+bracketright
+#bindsym $mod+Shift+bracketright
+bindsym $mod+Shift+Control+bracketright exec --no-startup-id light -A 10
+
+bindsym $mod+backslash                  exec --no-startup-id dmenucolor -c passmenu -p 'Passwords:'
+bindsym $mod+Shift+backslash            exec --no-startup-id dmenucolor -c networkmanager_dmenu
+#bindsym $mod+Shift+Control+backslash
+
+#bindsym $mod+semicolon
+bindsym $mod+Shift+semicolon            exec --no-startup-id $TERMINAL --name=cava -e 'i3-runner "cava"'
+#bindsym $mod+Shift+Control+semicolon
+
+#bindsym $mod+apostrophe
+#bindsym $mod+Shift+apostrophe
+#bindsym $mod+Shift+Control+apostrophe
+
+bindsym $mod+Return                     exec --no-startup-id $TERMINAL
+bindsym $mod+Shift+Return               exec --no-startup-id dmenucolor -c dmenu_run -p 'Applications:'
+#bindsym $mod+Shift+Control+Return
+
+#bindsym $mod+comma
+#bindsym $mod+Shift+comma
+#bindsym $mod+Shift+Control+comma
+
+#bindsym $mod+period
+#bindsym $mod+Shift+period
+#bindsym $mod+Shift+Control+period
+
+#bindsym $mod+slash
+bindsym $mod+Shift+slash                exec --no-startup-id dmenui3
+#bindsym $mod+Shift+Control+slash
+
+bindsym $mod+space                      focus mode_toggle
+bindsym $mod+Shift+space                floating toggle
+bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" > $HOME/.config/mpv/control
+
+
+########################
+# FUNCTION KEYBINDINGS #
+########################
+
+bindsym $mod+F1        exec --no-startup-id displayctrl HDMI-3
+#bindsym $mod+Shift+F1
+
+bindsym $mod+F2        exec --no-startup-id displayctrl HDMI-2
+#bindsym $mod+Shift+F2
+
+bindsym $mod+F3        exec --no-startup-id displayctrl -r HDMI-2 HDMI-3
+bindsym $mod+Shift+F3  exec --no-startup-id displayctrl -r HDMI-2 -p HDMI-3
+
+bindsym $mod+F4        exec --no-startup-id displayctrl LVDS-1
+#bindsym $mod+Shift+F4
+
+bindsym $mod+F5        exec --no-startup-id i3-powersaver
+#bindsym $mod+Shift+F5
+
+#bindsym $mod+F6
+#bindsym $mod+Shift+F6
+
+#bindsym $mod+F7
+#bindsym $mod+Shift+F7
+
+#bindsym $mod+F8
+#bindsym $mod+Shift+F8
+
+#bindsym $mod+F9
+#bindsym $mod+Shift+F9
+
+#bindsym $mod+F10
+#bindsym $mod+Shift+F10
+
+#bindsym $mod+F11
+#bindsym $mod+Shift+F11
+
+bindsym $mod+F12                        exec --no-startup-id toggletrackpad
+#bindsym $mod+Shift+F12
+
+bindsym Print                           exec --no-startup-id i3-maim -d
+bindsym Shift+Print                     exec --no-startup-id i3-maim -w
+bindsym --release Control+Print         exec --no-startup-id i3-maim -s
+bindsym  Shift+Control+Print            exec --no-startup-id i3-camtoggle
+
+bindsym $mod+Scroll_Lock                exec --no-startup-id lock
+#bindsym $mod+Shift+Scroll_Lock
+
+#bindsym $mod+Pause
+#bindsym $mod+Shift+Pause
+
+bindsym $mod+Insert                     exec --no-startup-id bash screencast
+#bindsym $mod+Shift+Insert
+
+bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
+#bindsym $mod+Shift+Delete
+
+#bindsym $mod+Prior
+#bindsym $mod+Shift+Prior
+
+bindsym $mod+Next                       reload
+bindsym $mod+Shift+Next                 restart
+bindsym $mod+Shift+Control+Next         exec --no-startup-id dmenushutdown
+
+
+#####################
+# MEDIA KEYBINDINGS #
+#####################
+
+bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+bindsym XF86AudioMute                   exec --no-startup-id amixer -D pulse sset Master toggle; exec --no-startup-id bash -c "$I3BLOCKS_VOLUME"
+bindsym XF86AudioMicMute                exec --no-startup-id pactl set-source-mute  $(pacmd list-sources|awk '/\* index:/{ print $3 }') toggle
+
+bindsym XF86AudioPause                  exec --no-startup-id echo "cycle pause" > $HOME/.config/mpv/control
+bindsym XF86AudioNext                   exec --no-startup-id echo "playlist-next" > $HOME/.config/mpv/control
+bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev" > $HOME/.config/mpv/control
+
+bindsym XF86MonBrightnessUp             exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown           exec --no-startup-id light -U 10
+
+bindsym XF86ScreenSaver                 exec --no-startup-id lock
+
+#bindsym XF86Launch1

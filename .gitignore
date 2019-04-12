@@ -33,5 +33,5 @@
 !.hg*
 !.gvimrc
 !.sshplus
-.bash_history
-
+!.config/i3/
+!.config/polybar
