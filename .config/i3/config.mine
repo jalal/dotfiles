@@ -90,6 +90,8 @@ exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 exec_always --no-startup-id 'clipit'
 exec --no-startup-id 'xset -b'
 exec --no-startup-id 'SpiderOakONE'
+exec --no-startup-id 'udiskie -Nt2'
+exec --no-startup-id 'twmnd'
 #exec_always --no-startup-id 'xset b off'
 
 # Startup items recycling station:

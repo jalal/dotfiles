@@ -37,10 +37,10 @@ export PATH=$PATH:/opt/genymobile/genymotion
 export PATH=$PATH:/usr/local/go/bin
 
 export MYPATH=/home/jalal/.pyenv/bin:$MYPATH
+export PATH=$MYPATH:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH=$MYPATH:$PATH
 
 export GOPATH=$HOME/go
 
