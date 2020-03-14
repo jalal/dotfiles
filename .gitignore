@@ -11,13 +11,13 @@
 !.hgignorerc
 !.bash_aliases
 !.bash*
+.bash_history
+.bash_it
 !.filezilla
 !.sdirs
 !.tmux.conf
 !.datrc
 !.vimrc
-!.vim
-!.vim/keymappings.vim
 !.zshrc
 !.xinputrc
 !.tnsrc
